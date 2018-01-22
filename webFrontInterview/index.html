@@ -1,0 +1,3789 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>web前端</title>
+    <style type="text/css">
+      h2{
+        font-family: '微软雅黑'
+      }
+    </style>
+  <link rel="stylesheet" type="text/css" href="Font-Awesome-3.2.1/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/amazeui.css">
+  <script src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/amazeui.min.js"></script>
+</head>
+<body>
+  <section data-am-widget="accordion" class="am-accordion am-accordion-gapped" data-am-accordion='{  }'>
+      <!--  class am-in 默认显示 am-active-->
+    <h2  class="am-accordion-title">HTML</h2><dd class="am-accordion-bd am-collapse">
+      <dl class="am-accordion-item ">
+        <dt class="am-accordion-title">
+          1.对WEB标准以及W3C的理解与认识
+        </dt>
+        <dd class="am-accordion-bd am-collapse ">
+          <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+          <div class="am-accordion-content">
+            <pre>
+标签闭合、标签小写、不乱嵌套、提高搜索机器人搜索几率；
+使用外链css和js脚本、结构行为表现的分离、文件下载与页面速度更快；
+内容能被更多的用户所访问、内容能被更广泛的设备所访问、更少的代码和组件；
+容易维护、改版方便，不需要变动页面内容；
+提供打印版本而不需要复制内容、提高网站易用性；
+            </pre>
+          </div>
+        </dd>
+      </dl>
+      <dl class="am-accordion-item">
+        <dt class="am-accordion-title">
+          2.xhtml和html有什么区别
+        </dt>
+        <dd class="am-accordion-bd am-collapse ">
+          <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+          <div class="am-accordion-content">
+            <pre>
+HTML是一种基本的WEB网页设计语言，XHTML是一个基于XML的置标语言最主要的不同：
+1.所有的标记都必须要有一个相应的结束标记
+2.所有标签的元素和属性的名字都必须使用小写
+3.所有的xml标记都必须合理嵌套
+4.所有的属性必须用引号""括起来
+5.把所有<和&特殊符号用编码表示
+6.给所有属性赋一个值
+7.不要再注释内容中使用"-"
+8.图片必须有说明文字
+            </pre>
+          </div>
+        </dd>
+      </dl>
+      <dl class="am-accordion-item">
+        <dt class="am-accordion-title">
+          3. Doctype作用? 严格模式与混杂模式如何区分？它们有何意义?
+        </dt>
+        <dd class="am-accordion-bd am-collapse ">
+          <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+          <div class="am-accordion-content">
+<pre>
+1）、&lt;!DOCTYPE> 声明位于文档中的最前面，处于 &lt;html> 标签之前。告知浏览器以何种模式来渲染文档。
+2）、严格模式的排版和JS运作模式是以该浏览器支持的最高标准运行。
+3）、在混杂模式中，页面以宽松的向后兼容的方式显示。模拟老式浏览器的行为以防止站点无法工作。
+4）、DOCTYPE不存在或格式不正确会导致文档以混杂模式呈现。
+</pre>
+          </div>
+        </dd>
+      </dl>
+      <dl class="am-accordion-item">
+        <dt class="am-accordion-title">
+          4.行内元素有哪些？块级元素有哪些？
+        </dt>
+        <dd class="am-accordion-bd am-collapse ">
+          <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+          <div class="am-accordion-content">
+            <pre>
+块级元素：div、ul、li、dl、dt、dd、p、h1-h6、blockquote
+行内元素：a、b、span、img、input、strong、select、label、em、button、textarea
+空元素：即系没有内容的HTML元素，例如：br、meta、hr、link、input、img
+            </pre>
+          </div>
+        </dd>
+      </dl>
+
+      <dl class="am-accordion-item">
+        <dt class="am-accordion-title">
+          5.JSON的基本数据格式
+        </dt>
+        <dd class="am-accordion-bd am-collapse ">
+          <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+          <div class="am-accordion-content">
+<pre>
+1.一个JSON对象——JSONObject:{"name":"胡小威" , "age":20 , "male":true}
+2.一个JSON数组——JSONArray:[{"name":"胡小威" , "age":20 , "male":true},{"name":"赵小亮" , "age":22 , "male":false}]
+3.复杂一点的JSONObject:
+  {"name":"胡小威", "age"=20, "male":true, "address":{"street":"岳麓山南", "city":"长沙","country":"中国"}}
+4.复杂一点的JSONArray
+  [{"name":"胡小威", "age"=20, "male":true, "address":{"street":"岳麓山南", "city":"长沙","country":"中国"}},
+  {"name":"赵小亮", "age"=22, "male":false, "address":{"street":"九州港", "city":"珠海","country":"中国"}}]
+5.来个更复杂的，这是我从爱帮公交上扒取的数据
+   {"buses":{"bus":[{"last_foot_dist":"0","time":"37","segments":{"segment":[{"line_name":"立珊专线(中南大学学生公寓-长沙火车站)","foot_dist":"362","stat_xys":"","stats":"岳麓山南;湖南师大;二里半;岳麓山北;市四医院;华图教育(太平街口);牛耳教育(南阳街口);韭菜园;曙光路口;长岛路口;长沙火车站","end_stat":"长沙火车站","line_xys":"","line_dist":"7535","start_stat":"岳麓山南"}]},"foot_dist":"362","dist":"7897"},{"last_foot_dist":"0","time":"41","segments":{"segment":[{"line_name":"旅1路(科教新村-长沙火车站)","foot_dist":"337","stat_xys":"","stats":"岳麓山南;湖南师大;二里半;岳麓山北;市四医院;华图教育(太平街口);蔡锷中路口;韭菜园;乔庄;曙光路口;长岛路口;五一东村;车站路口;长沙火车站","end_stat":"长沙火车站","line_xys":"","line_dist":"7822","start_stat":"岳麓山南"}]},"foot_dist":"337","dist":"8159"}]}}
+
+解析复杂实例一：
+{
+    "data": {
+        "feedbacks": {
+            "feedbacklist": [{"comment": "5分","createtime": "2016.09.07 12:38","score": 5,"username": "1331##11"}],
+            "totalcount": 1,
+            "totalscore": 5
+        },
+        "liketeamlist": [
+            {"limage": "http://baidu.com.465.jpg","lmarketprice": 199,"lteamId": 386,"lteamprice": 38,"ltitle": "我才是测试文本哦,用于测试此次验证。"},
+            {"limage": "http://baidu.com/37.jpg","lmarketprice": 3380,"lteamId": 57133,"lteamprice": 580,"ltitle": "测试文本,15级软件开发！"}
+        ],
+        "partnerteamlist": [
+            {"pteamId": 35,"pteamprice": 228,"ptitle": "计算机应用专业。"},
+            {"pteamId": 72598,"pteamprice": 2888,"ptitle": "潍坊职业学院。"},
+            {"pteamId": 3613,"pteamprice": 499,"ptitle": "2015级！"},
+            {"pteamId": 72638,"pteamprice": 4299,"ptitle": "本次测试于16年9月7日。"},
+            {"pteamId": 716,"pteamprice": 38,"ptitle": "后期持续更新！"}
+        ]
+    },
+    "state": 1 ,"err":null
+}
+
+
+{
+    "req": {
+        "method": "POST",
+        "url": "http://127.0.0.1:8081/banking-merchant-console/queryKeyByAcceptBizNoProcess.api",
+        "data": {
+            "acceptBizNo": "B018747A",
+            "sign": "b42a6d73179a59a3bbd5044c41351a3e"
+        },
+        "headers": {
+            "user-agent": "node-superagent/3.5.2",
+            "content-type": "application/json",
+            "accept": "application/json"
+        }
+    },
+    "header": {
+        "server": "Apache-Coyote/1.1",
+        "set-cookie": [
+            "JSESSIONID=0758EA591419778CE885F5F102BDB43F; Path=/banking-merchant-console/; HttpOnly"
+        ],
+        "content-type": "application/json;charset=UTF-8",
+        "content-language": "zh-CN",
+        "content-length": "620",
+        "date": "Mon, 05 Jun 2017 01:48:02 GMT",
+        "connection": "close"
+    },
+    "status": 200,
+    "text": "{\"pagination\":{\"orderRule\":null,\"pageNo\":null,\"totalPages\":null,\"orderBy\":null,\"pageSize\":null,\"totalCounts\":null},\"serviceCode\":\"000000\",\"appCode\":\"00\",\"withdrawNotifyUrl\":null,\"tellerId\":\"1\",\"orgNo\":\"101\",\"acceptBizNo\":\"B018747A\",\"systemNo\":\"CORE\",\"transDate\":\"2017-06-05\",\"signKey\":\"21232f297a57a5a743894a0e4a801fc3\",\"approvalFlag\":false,\"resultType\":\"N\",\"terminalNo\":null,\"accountingDate\":\"2017-06-05\",\"transTime\":\"09:48:02\",\"zipped\":\"N\",\"timeZone\":8,\"journalNo\":\"ME0352017060500000035\",\"refundNotifyUrl\":null,\"voucherNo\":null,\"reqJournalNo\":null,\"encrypted\":\"N\",\"payNotifyUrl\":null,\"messages\":[],\"authLevel\":\"00  \"}"
+}
+第一步：确定是json对象而不是json字符串，如果是字符串先转化为对象：
+var json = eval("("+ xxx +")");
+
+第二步：获取到某一步之后（json.text）可能会变为字符串，此时需要将字符串转化为对象然后继续获取，否则会变为undifine；
+</pre>
+          </div>
+        </dd>
+      </dl>
+
+
+      <dl class="am-accordion-item">
+        <dt class="am-accordion-title">
+          6.你做的页面在哪些流览器测试过？这些浏览器的内核分别是什么?
+        </dt>
+        <dd class="am-accordion-bd am-collapse ">
+          <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+          <div class="am-accordion-content">
+<pre>
+IE: trident内核   -ms ;
+Firefox：gecko内核
+Safari：webkit内核
+Opera：以前是presto内核，Opera现已改用Google Chrome的Blink内核   -o ;
+Chrome：Blink(基于webkit，Google与Opera Software共同开发)  -webkit ;
+</pre>
+          </div>
+        </dd>
+      </dl>
+
+      <dl class="am-accordion-item">
+        <dt class="am-accordion-title">
+          7.写出几种IE6 BUG的解决方法？
+        </dt>
+        <dd class="am-accordion-bd am-collapse ">
+          <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+          <div class="am-accordion-content">
+            <pre>
+ n  双边距BUG float引起的 使用display
+ n  像素问题 使用float引起的 使用dislpay:inline -3px
+ n  超链接hover 点击后失效 使用正确的书写顺序 linkvisited hover activen  Ie z-index问题 给父级添加position:relative
+ n  Png 透明 使用js代码改
+ n  Min-height 最小高度 ！Important 解决’
+ n  select 在ie6下遮盖 使用iframe嵌套
+ n  为什么没有办法定义1px左右的宽度容器(IE6默认的行高造成的，使用over:hidden,zoom:0.08line-height:1px)
+            </pre>
+          </div>
+        </dd>
+      </dl>
+      <dl class="am-accordion-item">
+        <dt class="am-accordion-title">
+          8.标签上title与alt属性的区别是什么？
+        </dt>
+        <dd class="am-accordion-bd am-collapse ">
+          <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+          <div class="am-accordion-content">
+           Alt 当图片不显示是用文字代表
+           Title 为该属性提供信息
+          </div>
+        </dd>
+      </dl>
+
+      <dl class="am-accordion-item">
+        <dt class="am-accordion-title">
+         9.浏览器标准模式和怪异模式之间的区别是什么？
+        </dt>
+        <dd class="am-accordion-bd am-collapse ">
+          <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+          <div class="am-accordion-content">
+           盒子模型 渲染模式的不同<br>
+           使用window.top.document.compatMode 可显示为什么模式
+          </div>
+        </dd>
+      </dl>
+
+      <dl class="am-accordion-item">
+        <dt class="am-accordion-title">
+          10.`XML`和`JSON`的区别
+        </dt>
+        <dd class="am-accordion-bd am-collapse ">
+          <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+          <div class="am-accordion-content">
+           <pre>
+(1).数据体积方面：JSON相对于XML来讲，数据的体积小，传递的速度更快些。
+(2).数据交互方面：JSON与JavaScript的交互更加方便，更容易解析处理，更好的数据交互。
+(3).数据描述方面：JSON对数据的描述性比XML较差。
+(4).传输速度方面：JSON的速度要远远快于XML。</pre>
+          </div>
+        </dd>
+      </dl>
+
+      <dl class="am-accordion-item">
+        <dt class="am-accordion-title">
+          11.什么是语义化的HTML？
+        </dt>
+        <dd class="am-accordion-bd am-collapse ">
+          <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+          <div class="am-accordion-content">
+就是当你写html时，要按照人们的思考逻辑写。不但要自己能看懂，也要让别人也能看懂，不要让别人觉得你的代码很乱。语义化的主要目的就是让大家直观的认识标签(markup)和属性(attribute)的用途和作用。
+  1，去掉或者丢失样式的时候能够让页面呈现出清晰的结构<br>
+  2，有利于SEO：和搜索引擎建立良好沟通，有助于爬虫抓取更多的有效信息：爬虫依赖于标签来确定上下文和各个关键字的权重<br>
+
+    3，方便其他设备解析（如屏幕阅读器、盲人阅读器、移动设备）以意义的方式来渲染网页；<br>
+
+    4，便于团队开发和维护，语义化更具可读性，是下一步吧网页的重要动向，遵循W3C标准的团队都遵循这个标准，可以减少差异化。
+          </div>
+        </dd>
+      </dl>
+
+       <dl class="am-accordion-item">
+        <dt class="am-accordion-title">
+          12.cookies，sessionStorage 和 localStorage 的区别？
+        </dt>
+        <dd class="am-accordion-bd am-collapse ">
+          <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+          <div class="am-accordion-content">
+            <pre>
+cookie在浏览器和服务器间来回传递。 sessionStorage和localStorage不会<br>
+sessionStorage和localStorage的存储空间更大；<br>
+sessionStorage和localStorage有更多丰富易用的接口；<br>
+sessionStorage和localStorage各自独立的存储空间；
+
+cookie的用途
+保存用户登录状态,将用户id存储于一个cookie内
+跟踪用户行为,一个天气预报网站
+定制页面,网站提供了换肤或更换布局的功能，那么可以使用cookie来记录用户的选项
+创建购物车,cookie记录了用户曾经浏览过的商品
+            </pre>
+          </div>
+        </dd>
+      </dl>
+
+      <dl class="am-accordion-item">
+        <dt class="am-accordion-title">
+          13.iframe有那些缺点
+        </dt>
+        <dd class="am-accordion-bd am-collapse ">
+          <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+          <div class="am-accordion-content">
+            使用iframe两个缺点:<br>
+            *iframe会阻塞主页面的Onload事件；<br>
+            *iframe和主页面共享连接池，而浏览器对相同域的连接有限制，所以会影响页面的并行加载。<br>
+             最好是通过javascript动态给iframe添加src属性值，这样可以可以绕开以上两个问题。
+          </div>
+        </dd>
+      </dl>
+
+       <dl class="am-accordion-item">
+        <dt class="am-accordion-title">
+          14.同步和异步的区别
+        </dt>
+        <dd class="am-accordion-bd am-collapse ">
+          <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+          <div class="am-accordion-content">
+           同步是阻塞模式，异步是非阻塞模式<br>
+            同步就是指一个进程在执行某个请求的时候，若该请求需要一段时间才能返回信息，那么这个进程将会一直等待下去，直到收到返回信息才继续执行下去；<br>
+            异步是指进程不需要一直等下去，而是继续执行下面的操作，不管其他进程的状态。当有消息返回时系统会通知进程进行处理，这样可以提高执行的效率。
+          </div>
+        </dd>
+      </dl>
+
+      <dl class="am-accordion-item">
+        <dt class="am-accordion-title">
+          15.优雅降级和渐进增强
+        </dt>
+        <dd class="am-accordion-bd am-collapse ">
+          <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+          <div class="am-accordion-content">
+            <pre>
+渐进增强 progressive enhancement：
+    针对低版本浏览器进行构建页面，保证最基本的功能，然后再针对高级浏览器进行效果、交互等改进和追加功能达到更好的用户体验.
+优雅降级 graceful degradation：一开始就构建完整的功能，然后再针对低版本浏览器进行兼容
+
+区别：
+a. 优雅降级是从复杂的现状开始，并试图减少用户体验的供给
+b. 渐进增强则是从一个非常基础的，能够起作用的版本开始，并不断扩充，以适应未来环境的需要
+c. 降级（功能衰减）意味着往回看；而渐进增强则意味着朝前看，同时保证其根基处于安全地带
+            </pre>
+          
+          </div>
+        </dd>
+      </dl>
+
+      <dl class="am-accordion-item">
+        <dt class="am-accordion-title">
+          16.html5有哪些新特性
+        </dt>
+        <dd class="am-accordion-bd am-collapse ">
+          <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+          <div class="am-accordion-content">
+            <pre>
+1.语义化更好的内容标签(header,nav,footer,aside,article,section)
+2.音频、视频API(audio,video)
+3.画布(canvas)API
+4.地理(Geolocation)API
+5.拖拽释放(Drag and drop)API
+6.本地离线存储
+7.表单控件,calendar、date、time、email、url、search
+            </pre>
+          </div>
+        </dd>
+      </dl>
+
+      <dl class="am-accordion-item">
+        <dt class="am-accordion-title">
+          17.一个页面从输入URL到页面加载显示完成，这个过程中都发生了什么？
+        </dt>
+        <dd class="am-accordion-bd am-collapse ">
+          <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+          <div class="am-accordion-content">
+            <pre>
+1.浏览器根据请求的URL交给DNS域名解析，找到真实IP，向服务器发起请求(TCP三次握手);
+2.服务器交给后台处理完成返回数据，浏览器接收文件(HTML、JS、CSS、图像等);
+3.浏览器对加载到的资源(HTML、JS、CSS、图像等)进行语法解析，建立相应的内部数据结构(如HTML的DOM);
+4.载入解析到的资源文件，渲染页面，完成。
+            </pre>
+          </div>
+        </dd>
+      </dl>
+      <dl class="am-accordion-item">
+        <dt class="am-accordion-title">
+          18.浏览器的渲染过程
+        </dt>
+        <dd class="am-accordion-bd am-collapse ">
+          <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+          <div class="am-accordion-content">
+            <pre>
+1.浏览器请求到HTML代码后，在生成DOM的最开始阶段，并行发起css、图片、js的请求，无论他们是否在HEAD里。浏览器会将HTML
+  解析成一个DOM树，DOM树的构建过程是一个深度遍历过程；当前节点的所有子节点都构建好后才会去构建当前节点的下一个兄弟节点。
+2.CSS文件下载完成，开始构建CSSOM
+3.所有CSS文件下载完成，cssom构建结束后，和dom一起生成Render Tree
+4.有了Render Tree，浏览器已经能知道网页中有哪些节点，各个节点的css定义以及他们的从属关系。下一步操作就是计算出每个节
+  点在屏幕中的位置。
+5.最后一步，按照算出来的规则，把内容渲染到屏幕上。
+
+ 以上五个步骤前三个步骤因为dom、cssom、Render Tree都可能在第一次Painting后又被更新多次，比如JS修改了DOM或者css属性，layout和Painting也会被重复执行，除了DOM、cssom更新的原因外，图片下载完成后也需要调用layout和Painting来更新网页。
+
+display:none的节点不会被加入Render Tree，尔visibility:hidden则会，所以，如果某个节点最开始是不显示的，设为display:none是更优的。
+            </pre>
+          </div>
+        </dd>
+      </dl>
+      <dl class="am-accordion-item">
+        <dt class="am-accordion-title">
+          19.一个http请求的详细过程
+        </dt>
+        <dd class="am-accordion-bd am-collapse ">
+          <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+          <div class="am-accordion-content">
+           <pre>
+我们来看当我们在浏览器输入www.linux178.com,幕后所发生的一切。
+1.搜索浏览器自身的DNS缓存，（Chrome自身的缓存：chrome://net-internals/#dns 来进行查看）
+  有，并且没有过期，则解析结束。
+2.搜索操作系统自身的DNS缓存（windows：ipconfig /displaydns 来进行查看）
+  有，则解析结束。
+3.读取hosts文件
+  有，则解析结束。
+4.浏览器就会发起一个DNS的系统调用，向本地配置的首选DNS服务器发起域名解析请求      （即运营商，运营商的DNS服务器必须得提供给我们该域名的IP地址）
+  运营商的DNS服务器首先查找自身的缓存 ，有，并且没有过期，则解析结束。
+  运营商的DNS代我们的浏览器发起迭代DNS解析请求，它首先是会找根域的DNS的IP地址（这个DNS服务器都内置13台根域的DNS的IP地址）
+  发起请求，www.linux178.com，问这个域名的IP地址多少
+  根域发现这是一个顶级域com域的一个域名，于是就告诉运营商的DNS我不知道这个域名的IP地址，但是我知道com域的IP地址，你去找它
+  于是运营商的DNS就得到了com域的IP地址
+  又向com域的IP地址发起了请求，www.linux178.com，问这个域名的IP地址多少
+  com域这台服务器告诉运营商的DNS我不知道，但是我知道linux178.com这个域的DNS地址，你去找它
+  于是运营商的DNS又向linux178.com域名的DNS地址发起请求，请问www.linux178.com这个域名的IP地址是多少
+  这个时候linux178.com域的DNS服务器一查，诶，果真在我这里，于是就把找到的结果发送给运营商的DNS服务器
+  运营商的DNS服务器就拿到了www.linux178.com这个域名对应的IP地址
+  并返回给Windows系统内核
+  内核又把结果返回给浏览器
+  浏览器开始渲染页面
+
+如果经过以上的4个步骤，还没有解析成功，那么会进行如下步骤（以下是针对Windows操作系统）：
+。。。。。。
+
+           </pre>
+          </div>
+        </dd>
+      </dl>
+
+      <dl class="am-accordion-item">
+        <dt class="am-accordion-title">
+          20.TCP-IP协议
+        </dt>
+        <dd class="am-accordion-bd am-collapse ">
+          <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+          <div class="am-accordion-content">
+           <pre>
+TCP通信过程包括三个步骤：建立连接、传输数据、断开连接。
+TCP的状态 (
+SYN表示建立连接,
+FIN表示关闭连接,
+ACK表示响应,
+PSH表示有 DATA数据传输,
+RST表示连接重置,
+URGurgent紧急)
+           </pre>
+          </div>
+        </dd>
+      </dl>
+      <dl class="am-accordion-item">
+        <dt class="am-accordion-title">
+          21.三次握手建立连接：
+        </dt>
+        <dd class="am-accordion-bd am-collapse ">
+          <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+          <div class="am-accordion-content">
+           <pre>
+SYN（synchronous）是TCP/IP建立连接时使用的握手信号。
+SYN_SENT表示请求连接
+seq是序列号，这是为了连接以后传送数据用的
+ack是确认号，是对收到的数据包的确认，值是等待接收的数据包的序列号。
+ESTABLISHED状态
+第一次握手：客户端发送syn包(seq=x)到服务器，并进入SYN_SEND状态，等待服务器确认；
+第二次握手：服务器收到syn包，必须确认客户的SYN（ack=x+1），同时自己也发送一个SYN包（seq=y），即SYN+ACK包，此时服务器进入SYN_RECV状态；
+第三次握手：客户端收到服务器的SYN＋ACK包，向服务器发送确认包ACK(ack=y+1)，此包发送完毕，客户端和服务器进入ESTABLISHED状态，完成三次握手。
+握手过程中传送的包里不包含数据，三次握手完毕后，客户端与服务器才正式开始传送数据。理想状态下，TCP连接一旦建立，在通信双方中的任何一方主动关闭连接之前，TCP 连接都将被一直保持下去。
+
+传输数据过程：
+a.超时重传:超时重传机制用来保证TCP传输的可靠性。每次发送数据包时，发送的数据报都有seq号，接收端收到数据后，会回复ack
+           进行确认，表示某一seq号数据已经收到。发送方在发送了某个seq包后，等待一段时间，如果没有收到对应的ack回复，就会认为报文丢失，会重传这个数据包。
+
+b.快速重传:接受数据一方发现有数据包丢掉了。就会发送ack报文告诉发送端重传丢失的报文。如果发送端连续收到标号相同的ack
+           包，则会触发客户端的快速重传。比较超时重传和快速重传，可以发现超时重传是发送端在傻等超时，然后触发重传；而快速重传则是接收端主动告诉发送端数据没收到，然后触发发送端重传。
+
+c.流量控制:这里主要说TCP滑动窗流量控制。TCP头里有一个字段叫Window，又叫Advertised-Window，这个字段是接收端告诉发送端
+           自己还有多少缓冲区可以接收数据。于是发送端就可以根据这个接收端的处理能力来发送数据，而不会导致接收端处理不过来。 滑动窗可以是提高TCP传输效率的一种机制。
+
+d.拥塞控制:滑动窗用来做流量控制。流量控制只关注发送端和接受端自身的状况，而没有考虑整个网络的通信情况。拥塞控制，则
+           是基于整个网络来考虑的。考虑一下这样的场景：某一时刻网络上的延时突然增加，那么，TCP对这个事做出的应对只有重传数据，但是，重传会导致网络的负担更重，于是会导致更大的延迟以及更多的丢包，于是，这个情况就会进入恶性循环被不断地放大。试想一下，如果一个网络内有成千上万的TCP连接都这么行事，那么马上就会形成“网络风暴”，TCP这个协议就会拖垮整个网络。为此，TCP引入了拥塞控制策略。拥塞策略算法主要包括：慢启动，拥塞避免，拥塞发生，快速恢复。
+           </pre>
+          </div>
+        </dd>
+      </dl>
+      <dl class="am-accordion-item">
+        <dt class="am-accordion-title">
+          22.四次握手断开连接：
+        </dt>
+        <dd class="am-accordion-bd am-collapse ">
+          <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+          <div class="am-accordion-content">
+           <pre>
+第一次挥手：主动关闭方发送一个FIN，用来关闭主动方到被动关闭方的数据传送，也就是主动关闭方告诉被动关闭方：我已经不会
+            再给你发数据了(当然，在fin包之前发送出去的数据，如果没有收到对应的ack确认报文，主动关闭方依然会重发这些数据)，但此时主动关闭方还可以接受数据。
+(主动方说：我要关闭连接了)
+第二次挥手：被动关闭方收到FIN包后，发送一个ACK给对方，确认序号为收到序号+1（与SYN相同，一个FIN占用一个序号）。
+(被动方说：我收到了)
+第三次挥手：被动关闭方发送一个FIN，用来关闭被动关闭方到主动关闭方的数据传送，也就是告诉主动关闭方，我的数据也发送完             了，不会再给你发数据了。
+(被动方接着说：我也关闭连接了)
+第四次挥手：主动关闭方收到FIN后，发送一个ACK给被动关闭方，确认序号为收到序号+1，至此，完成四次挥手。
+(主动方确认关闭)
+           </pre>
+          </div>
+        </dd>
+      </dl>
+      
+ 
+      <dl class="am-accordion-item">
+        <dt class="am-accordion-title">
+          23.四次握手断开连接：
+        </dt>
+        <dd class="am-accordion-bd am-collapse ">
+          <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+          <div class="am-accordion-content">
+           localStorage    长期存储数据，浏览器关闭后数据不丢失；
+           sessionStorage  数据在浏览器关闭后自动删除。
+          </div>
+        </dd>
+      </dl>
+      <dl class="am-accordion-item">
+        <dt class="am-accordion-title">
+          23.四次握手断开连接：
+        </dt>
+        <dd class="am-accordion-bd am-collapse ">
+          <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+          <div class="am-accordion-content">
+           localStorage    长期存储数据，浏览器关闭后数据不丢失；<br>
+           sessionStorage  数据在浏览器关闭后自动删除。
+          </div>
+        </dd>
+      </dl>
+      <dl class="am-accordion-item">
+        <dt class="am-accordion-title">
+          23.四次握手断开连接：
+        </dt>
+        <dd class="am-accordion-bd am-collapse ">
+          <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+          <div class="am-accordion-content">
+           localStorage    长期存储数据，浏览器关闭后数据不丢失；<br>
+           sessionStorage  数据在浏览器关闭后自动删除。
+          </div>
+        </dd>
+      </dl>
+      <dl class="am-accordion-item">
+        <dt class="am-accordion-title">
+          23.四次握手断开连接：
+        </dt>
+        <dd class="am-accordion-bd am-collapse ">
+          <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+          <div class="am-accordion-content">
+           localStorage    长期存储数据，浏览器关闭后数据不丢失；<br>
+           sessionStorage  数据在浏览器关闭后自动删除。
+          </div>
+        </dd>
+      </dl>
+      <dl class="am-accordion-item">
+        <dt class="am-accordion-title">
+          23.四次握手断开连接：
+        </dt>
+        <dd class="am-accordion-bd am-collapse ">
+          <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+          <div class="am-accordion-content">
+           localStorage    长期存储数据，浏览器关闭后数据不丢失；<br>
+           sessionStorage  数据在浏览器关闭后自动删除。
+          </div>
+        </dd>
+      </dl>
+      <dl class="am-accordion-item">
+        <dt class="am-accordion-title">
+          23.四次握手断开连接：
+        </dt>
+        <dd class="am-accordion-bd am-collapse ">
+          <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+          <div class="am-accordion-content">
+           localStorage    长期存储数据，浏览器关闭后数据不丢失；<br>
+           sessionStorage  数据在浏览器关闭后自动删除。
+          </div>
+        </dd>
+      </dl>
+      <dl class="am-accordion-item">
+        <dt class="am-accordion-title">
+          23.四次握手断开连接：
+        </dt>
+        <dd class="am-accordion-bd am-collapse ">
+          <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+          <div class="am-accordion-content">
+           localStorage    长期存储数据，浏览器关闭后数据不丢失；<br>
+           sessionStorage  数据在浏览器关闭后自动删除。
+          </div>
+        </dd>
+      </dl>
+
+  </section>
+
+  <section data-am-widget="accordion" class="am-accordion am-accordion-gapped" data-am-accordion='{  }'>
+      <h2  class="am-accordion-title">CSS</h2>
+      <dd class="am-accordion-bd am-collapse ">
+        <dl class="am-accordion-item">
+            <dt class="am-accordion-title">
+              1. CSS选择器的权重与优先规则
+            </dt>
+            <dd class="am-accordion-bd am-collapse ">
+              <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+              <div class="am-accordion-content">
+                  第一等：代表内联样式，如: style=””，权值为1000。 <br/>
+                  第二等：代表ID选择器，如：#content，权值为100。<br/>
+                  第三等：代表类，伪类和属性选择器，如.content，权值为10。<br/>
+                  第四等：代表类型选择器和伪元素选择器，如div p，权值为1。
+                  <pre>
+#content div#main-content h2{color:red;}
+#content #main-content>h2{color:blue}
+body #content div[id="main-content"] h2{color:green;}
+#main-content div.paragraph h2{color:orange;}
+#main-content [class="paragraph"] h2{color:yellow;}
+div#main-content div.paragraph h2.first{color:pink;}
+&lt;div id="content">
+    &lt;div id="main-content">
+        &lt;div>CSS简介&lt;/div>
+        &lt;p>CSS（Cascading Style Sheet，可译为“层叠样式表”或“级联样式表”）是一组格式设置规则。&lt;/p>
+        &lt;div class="paragraph">
+            &lt;div class="first">使用CSS布局的优点&lt;/div>
+            &lt;p>1、表现和内容相分离 2、提高页面浏览速度 3、易于维护和改版 4、使用CSS布局更符合现在的W3C标准.&lt;/p>
+        &lt;/div>
+    &lt;/div>
+&lt;/div>
+让我们来一起算算六个样规式则各自的特殊性的值：
+第一个特殊性的值=2*100+2*1=202
+第二个特殊性的值=2*100+1=201
+第三个特殊性的值=1*100+1*10+3*1=113
+第四个特殊性的值=1*100+1*10+2*1=112
+第五个特殊性的值=1*100+1*10+1*1=111
+第六个特殊性的值=1*100+2*10+3*1=123
+
+IE6, 支持 _ 不支持同一选择符中的 !important
+ .bb{
+   background-color:#f1ee18;/*所有识别*/
+  .background-color:#00deff\9; /*IE6、7、8识别*/
+  +background-color:#a200ff;/*IE6、7识别*/
+  _background-color:#1e0bd1;/*IE6识别*/
+
+  }
+</pre>
+              </div>
+            </dd>
+        </dl>
+
+        <dl class="am-accordion-item">
+        <dt class="am-accordion-title">
+          2.CSS引入的方式有哪些? link和@import的区别是?
+        </dt>
+        <dd class="am-accordion-bd am-collapse ">
+          <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+          <div class="am-accordion-content">
+           内联 内嵌 外链 导入<br>
+           区别 ：同时加载；前者无兼容性，后者CSS2.1以下浏览器不支持；Link支持使用javascript改变样式，后者不可
+          </div>
+        </dd>
+      </dl>
+
+      <dl class="am-accordion-item">
+        <dt class="am-accordion-title">
+          3.CSS选择符有哪些？哪些属性可以继承？优先级算法如何计算？内联和important哪个优先级高？
+        </dt>
+        <dd class="am-accordion-bd am-collapse ">
+          <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+          <div class="am-accordion-content">
+           标签选择符 类选择符 id选择符<br>
+           继承不如指定Id>class>标签选择l  内联和important优先级高是后者优先级高
+          </div>
+        </dd>
+      </dl>
+       <dl class="am-accordion-item">
+        <dt class="am-accordion-title">
+         4.css的基本语句构成是？
+        </dt>
+        <dd class="am-accordion-bd am-collapse ">
+          <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+          <div class="am-accordion-content">
+          选择器{属性1:值1;属性2:值2;……}
+          </div>
+        </dd>
+      </dl>
+
+       <dl class="am-accordion-item">
+        <dt class="am-accordion-title">
+          5.描述css reset的作用和用途。
+        </dt>
+        <dd class="am-accordion-bd am-collapse ">
+          <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+          <div class="am-accordion-content">
+           Reset重置浏览器的css默认属性浏览器的品种不同，样式不同，然后重置，让他们统一
+          </div>
+        </dd>
+      </dl>
+
+      <dl class="am-accordion-item">
+        <dt class="am-accordion-title">
+          6.解释css sprites，如何使用。
+        </dt>
+        <dd class="am-accordion-bd am-collapse ">
+          <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+          <div class="am-accordion-content">
+           Css 精灵 把一堆小的图片整合到一张大的图片上，减轻服务器对图片的请求数量
+          </div>
+        </dd>
+      </dl>
+
+      <dl class="am-accordion-item">
+        <dt class="am-accordion-title">
+          7.清除浮动的几种方式，各自的优缺点
+        </dt>
+        <dd class="am-accordion-bd am-collapse ">
+          <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+          <div class="am-accordion-content">
+            使用空标签清除浮动clear:both（理论上能清楚任何标签，，，增加无意义的标签）<br>
+             使用overflow:auto（空标签元素清除浮动而不得不增加无意代码的弊端,使用zoom:1用于兼容IE）<br>
+              是用afert伪元素清除浮动(用于非IE浏览器)
+          </div>
+        </dd>
+      </dl>
+      <dl class="am-accordion-item">
+        <dt class="am-accordion-title">
+          8.介绍一下CSS的盒子模型？
+        </dt>
+        <dd class="am-accordion-bd am-collapse ">
+          <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+          <div class="am-accordion-content">
+            （1）有两种， IE 盒子模型、标准 W3C 盒子模型；IE的content部分包了含 border 和 pading;<br>
+            （2）盒模型： 内容(content)、填充(padding)、边界(margin)、 边框(border).
+          </div>
+        </dd>
+      </dl>
+      <dl class="am-accordion-item">
+        <dt class="am-accordion-title">
+          9.列出display的值，说明他们的作用。
+        </dt>
+        <dd class="am-accordion-bd am-collapse ">
+          <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+          <div class="am-accordion-content">
+            block 象块类型元素一样显示。<br>
+            none 缺省值。象行内元素类型一样显示。<br>
+            inline-block 象行内元素一样显示，但其内容象块类型元素一样显示。<br>
+            list-item 象块类型元素一样显示，并添加样式列表标记。
+          </div>
+        </dd>
+      </dl>
+
+       <dl class="am-accordion-item">
+        <dt class="am-accordion-title">
+          10.position的值 relative和absolute定位原点是？
+        </dt>
+        <dd class="am-accordion-bd am-collapse ">
+          <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+          <div class="am-accordion-content"><pre>
+*absolute生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位。
+*fixed （老IE不支持）生成绝对定位的元素，相对于浏览器窗口进行定位。
+*relative生成相对定位的元素，相对于其正常位置进行定位。
+static 默认值。没有定位，元素出现在正常的流中*（忽略 top, bottom, left, right z-index 声明）。
+inherit 规定从父元素继承 position 属性的值。
+如果父元素的取值为static(默认).子元素(行内元素)取值absolute,fixed，此时可以设置子元素宽高
+如果父元素的取值为absolute.    子元素(行内元素)取值absolute,fixed,inherit,此时可以设置子元素宽高
+如果父元素的取值为relative.    子元素(行内元素)取值absolute,fixed,此时可以设置子元素宽高
+如果父元素的取值为fixed.       子元素(行内元素)取值absolute,fixed,inherit,此时可以设置子元素宽高
+//relative相对于本身  注意relative的偏移是基于对象的margin的左上侧的。
+//absolute
+  //1.父元素设置了position属性,子元素就按照父元素定位
+      //父元素设置了margin，border，padding等属性，那么这个定位点将忽略padding
+      //后面的元素就相对于父元素进行定位
+  //2.如果子元素的父元素不存在position属性，就会以body进行定位
+//fixed fixed是特殊的absolute，即fixed总是以浏览器的可视窗口进行定位。</pre>
+          </div>
+        </dd>
+      </dl>
+
+      <dl class="am-accordion-item">
+        <dt class="am-accordion-title">
+          11.CSS3有哪些新特性？
+        </dt>
+        <dd class="am-accordion-bd am-collapse ">
+          <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+          <div class="am-accordion-content">
+            <pre>
+CSS3实现圆角（border-radius:8px）
+阴影（box-shadow:10px）
+对文字加特效（text-shadow、）
+线性渐变（gradient）
+旋转（transform）transform:rotate(9deg) scale(0.85,0.90) translate(0px,-30px) skew(-9deg,0deg);//旋转,缩放,定位,倾斜
+多背景 rgba
+反射（Reflect）
+@Font-face 特性
+Word-wrap & Text-overflow 样式
+文字渲染（Text-decoration）
+多列布局（multi-column layout）
+Animation 动画
+            </pre>
+
+          </div>
+        </dd>
+      </dl>
+
+      <dl class="am-accordion-item">
+        <dt class="am-accordion-title">
+          12.为什么要初始化CSS样式
+        </dt>
+        <dd class="am-accordion-bd am-collapse ">
+          <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+          <div class="am-accordion-content">
+             因为浏览器的兼容问题，不同浏览器对有些标签的默认值是不同的，如果没对CSS初始化往往会出现浏览器之间的页面显示差异。<br>
+              当然，初始化样式会对SEO有一定的影响，但鱼和熊掌不可兼得，但力求影响最小的情况下初始化。<br>
+              最简单的初始化方法就是： {padding: 0; margin: 0;} （不建议）
+          </div>
+        </dd>
+      </dl>
+
+
+      <dl class="am-accordion-item">
+        <dt class="am-accordion-title">
+          13.CSS实现垂直水平居中
+        </dt>
+        <dd class="am-accordion-bd am-collapse ">
+          <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+          <div class="am-accordion-content">
+             <pre>
+.wrapper{
+    background-color:#6699FF;width:200px;height:200px;position: absolute;left: 50%;top:50%;
+    transform: translate(-50%,-50%);
+}
+.wrapper{可以用position: absolute;width:200px;height:200px;left:50%;top:50%; margin-left:-100px;
+    margin-top:-100px;
+    border:1px solid #00F
+}
+.wrapper{position: absolute;top:0;left:0;bottom:0;right:0;width:50%;height:50%;margin:auto;background-color:red;}
+             </pre>
+          </div>
+        </dd>
+      </dl>
+
+       <dl class="am-accordion-item">
+        <dt class="am-accordion-title">
+          14.href和src有什么区别？
+        </dt>
+        <dd class="am-accordion-bd am-collapse ">
+          <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+          <div class="am-accordion-content">
+             引入和引用
+          </div>
+        </dd>
+      </dl>
+      <dl class="am-accordion-item">
+        <dt class="am-accordion-title">
+          15.什么是CSS Hack
+        </dt>
+        <dd class="am-accordion-bd am-collapse ">
+          <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+          <div class="am-accordion-content">
+             一般来说是针对不同的浏览器写不同的CSS,就是 CSS Hack。<br>
+              IE浏览器Hack一般又分为三种，条件Hack、属性级Hack、选择符Hack<br>
+              <pre>
+// 1、条件Hack
+  <!--[if IE]>
+    <style>
+      .test{color:red;}
+    </style>
+  <![endif]-->
+// 2、属性Hack
+.test{
+color:#090\9; /* For IE8+ ie6也可以*/
+*color:#f00;  /* For IE7 and earlier */
+_color:#ff0;  /* For IE6 and earlier */
+}
+// 3、选择符Hack
+* html .test{color:#090;}       /* For IE6 and earlier */
+* + html .test{color:#ff0;}     /* For IE7 */
+              </pre>
+          </div>
+        </dd>
+      </dl>
+      
+      <dl class="am-accordion-item">
+        <dt class="am-accordion-title">
+          16.CSS中` link` 和`@import `的区别
+        </dt>
+        <dd class="am-accordion-bd am-collapse ">
+          <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+          <div class="am-accordion-content">
+<pre>
+      (1) link属于HTML标签，而@import是CSS提供的;
+
+    (2) 页面被加载的时，link会同时被加载，而@import被引用的CSS会等到引用它的CSS文件被加载完再加载;
+
+    (3) import只在IE5以上才能识别，而link是HTML标签，无兼容问题;
+
+    (4) link方式的样式的权重 高于@import的权重.
+</pre>
+          </div>
+        </dd>
+      </dl>
+      <dl class="am-accordion-item">
+        <dt class="am-accordion-title">
+          17.box-sizing属性
+        </dt>
+        <dd class="am-accordion-bd am-collapse ">
+          <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+          <div class="am-accordion-content">
+<pre>
+  `box-sizing`属性主要用来控制元素的盒模型的解析模式。默认值是`content-box`。
+
+
+- `content-box`：让元素维持W3C的标准盒模型。元素的宽度/高度由`border + padding + content`的宽度/高度决定，设置`width/height`属性指的是`content`部分的宽/高
+
+- `border-box`：让元素维持IE传统盒模型（IE6以下版本和IE6~7的怪异模式）。设置`width/height`属性指的是`border + padding + content`
+
+
+
+标准浏览器下，按照W3C规范对盒模型解析，一旦修改了元素的边框或内距，就会影响元素的盒子尺寸，就不得不重新计算元素的盒子尺寸，从而影响整个页面的布局。
+
+布局所占宽度Width：
+
+```css
+Width = width + padding-left + padding-right + border-left + border-right
+
+```
+
+布局所占高度Height:
+
+```css
+Height = height + padding-top + padding-bottom + border-top + border-bottom
+
+```
+#### `padding-box`
+
+布局所占宽度Width：
+
+```css
+Width = width(包含padding-left + padding-right) + border-top + border-bottom
+
+```
+
+布局所占高度Height:
+
+```css
+Height = height(包含padding-top + padding-bottom) + border-top + border-bottom
+
+
+```
+
+#### `border-box`
+
+布局所占宽度Width：
+
+```css
+Width = width(包含padding-left + padding-right + border-left + border-right)
+```
+
+布局所占高度Height:
+
+```css
+Height = height(包含padding-top + padding-bottom + border-top + border-bottom)
+```
+</pre>
+          </div>
+        </dd>
+      </dl>
+      <dl class="am-accordion-item">
+        <dt class="am-accordion-title">
+          18.CSS3新增伪类
+        </dt>
+        <dd class="am-accordion-bd am-collapse ">
+          <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+          <div class="am-accordion-content">
+<pre>
+p:first-of-type 选择属于其父元素的首个 p 元素的每个 p 元素。
+p:last-of-type  选择属于其父元素的最后 p 元素的每个 p 元素。
+p:only-of-type  选择属于其父元素唯一的 p 元素的每个 p 元素。
+p:only-child    选择属于其父元素的唯一子元素的每个 p 元素。
+p:nth-child(2)  选择属于其父元素的第二个子元素的每个 p 元素。
+:enabled  :disabled 控制表单控件的禁用状态。
+:checked        单选框或复选框被选中。
+</pre>
+          </div>
+        </dd>
+      </dl><dl class="am-accordion-item">
+        <dt class="am-accordion-title">
+          19.常见兼容性问题
+        </dt>
+        <dd class="am-accordion-bd am-collapse ">
+          <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+          <div class="am-accordion-content">
+<pre>
+png24位的图片在iE6浏览器上出现背景，解决方案是做成PNG8.也可以引用一段脚本处理.
+浏览器默认的margin和padding不同。解决方案是加一个全局的*{margin:0;padding:0;}来统一。
+IE6双边距bug:块属性标签float后，又有横行的margin情况下，在ie6显示margin比设置的大。
+浮动ie产生的双倍距离（IE6双边距问题：在IE6下，如果对元素设置了浮动，同时又设置了margin-left或margin-right，margin值会加倍。）
+
+#box{ float:left; width:10px; margin:0 0 0 100px;}
+这种情况之下IE会产生20px的距离，解决方案是在float的标签样式控制中加入
+_display:inline;将其转化为行内属性。(_这个符号只有ie6会识别)
+渐进识别的方式，从总体中逐渐排除局部。
+首先，巧妙的使用“\9”这一标记，将IE游览器从所有情况中分离出来。
+接着，再次使用“+”将IE8和IE7、IE6分离开来，这样IE8已经独立识别。
+.bb{
+
+  background-color:#f1ee18;/*所有识别*/
+  .background-color:#00deff\9; /*IE6、7、8识别*/
+  +background-color:#a200ff;/*IE6、7识别*/
+  _background-color:#1e0bd1;/*IE6识别*/
+}
+
+
+怪异模式问题：漏写DTD声明，Firefox仍然会按照标准模式来解析网页，但在IE中会触发
+怪异模式。为避免怪异模式给我们带来不必要的麻烦，最好养成书写DTD声明的好习惯。现在
+可以使用[html5](http://www.w3.org/TR/html5/single-page.html)推荐的写法：`<doctype html>`
+</pre>
+          </div>
+        </dd>
+      </dl>
+      <dl class="am-accordion-item">
+        <dt class="am-accordion-title">
+          20.上下margin重合问题
+        </dt>
+        <dd class="am-accordion-bd am-collapse ">
+          <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+          <div class="am-accordion-content">
+<pre>
+ie和ff都存在，相邻的两个div的margin-left和margin-right不会重合，但是margin-top和margin-bottom却会发生重合。
+解决方法，养成良好的代码编写习惯，同时采用margin-top或者同时采用margin-bottom。
+
+#### 解释下浮动和它的工作原理？清除浮动的技巧
+浮动元素脱离文档流，不占据空间。浮动元素碰到包含它的边框或者浮动元素的边框停留。
+1.使用空标签清除浮动。
+  这种方法是在所有浮动标签后面添加一个空标签 定义css clear:both. 弊端就是增加了无意义标签。
+2.使用overflow。
+  给包含浮动元素的父标签添加css属性 overflow:auto; zoom:1; zoom:1用于兼容IE6。
+3.使用after伪对象清除浮动。
+  该方法只适用于非IE浏览器。具体写法可参照以下示例。使用中需注意以下几点。一、该方法中必须为需要清除浮动元素的伪对象中设置 height:0，否则该元素会比实际高出若干像素；
+</pre>
+          </div>
+        </dd>
+      </dl>
+      <dl class="am-accordion-item">
+        <dt class="am-accordion-title">
+          21.浮动元素引起的问题和解决办法
+        </dt>
+        <dd class="am-accordion-bd am-collapse ">
+          <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+          <div class="am-accordion-content">
+<pre>
+浮动元素引起的问题：
+  （1）父元素的高度无法被撑开，影响与父元素同级的元素
+  （2）与浮动元素同级的非浮动元素（内联元素）会跟随其后
+  （3）若非第一个元素浮动，则该元素之前的元素也需要浮动，否则会影响页面显示的结构
+解决方法：
+使用`CSS`中的`clear:both`;属性来清除元素的浮动可解决2、3问题，对于问题1，添加如下样式，给父元素添加`clearfix`样式：
+
+    .clearfix:after{content: ".";display: block;height: 0;clear: both;visibility: hidden;}
+    .clearfix{display: inline-block;} /* for IE/Mac */
+**清除浮动的几种方法：**
+
+```css
+    1，额外标签法,<div style="clear:both;"></div>（缺点：不过这个办法会增加额外的标签使HTML结构看起来不够简洁。）
+    2，使用after伪类
+    #parent:after{
+        content:".";
+        height:0;
+        visibility:hidden;
+        display:block;
+        clear:both;
+    }
+    3,浮动外部元素
+    4,设置overflow为hidden或者auto
+</pre>
+          </div>
+        </dd>
+      </dl>
+      <dl class="am-accordion-item">
+        <dt class="am-accordion-title">
+          22.CSS透明opacity和IE各版本透明度滤镜filter的最准确用法
+        </dt>
+        <dd class="am-accordion-bd am-collapse ">
+          <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+          <div class="am-accordion-content">
+<pre>
+IE4.0以上版本，支持以下14种滤镜：
+滤镜名    说明
+
+Alpha     让HTML元件呈现出透明的渐进效果
+Blur     让HTML元件产生风吹模糊的效果
+Chroma     让图像中的某一颜色变成透明色
+DropShadow     让HTML元件有一个下落式的阴影
+FlipH     让HTML元件水平翻转
+FlipV     让HTML元件垂直翻转
+Glow     在元件的周围产生光晕而模糊的效果
+Gray     把一个彩色的图片变成黑白色
+Invert     产生图片的照片底片的效果
+Light     在HTML元件上放置一个光影
+Mask     利用另一个HTML元件在另一个元件上产生图像的遮罩
+Shadow     产生一个比较立体的阴影
+Wave     让HTML元件产生水平或是垂直方向上的波浪变形
+XRay     产生HTML元件的轮廓，就像是照X光一样
+
+/* IE 4-9 */
+filter:alpha(opacity=50);
+filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+</pre>
+          </div>
+        </dd>
+      </dl>
+      <dl class="am-accordion-item">
+        <dt class="am-accordion-title">
+          23.常用的布局及技巧
+        </dt>
+        <dd class="am-accordion-bd am-collapse ">
+          <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+          <div class="am-accordion-content">
+              <dl class="am-accordion-item">
+                <dt class="am-accordion-title">
+                  1.单列布局
+                </dt>
+                <dd class="am-accordion-bd am-collapse ">
+                  <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+                  <div class="am-accordion-content">
+                    <dl class="am-accordion-item">
+                      <dt class="am-accordion-title">
+                        水平居中
+                      </dt>
+                      <dd class="am-accordion-bd am-collapse ">
+                        <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+                        <div class="am-accordion-content">
+<pre>
+(1)使用inline-block 和 text-align实现
+.parent{text-align: center;}
+.child{display: inline-block;}
+优点：兼容性好；不足：需要同时设置子元素和父元素
+
+(2)使用margin:0 auto来实现
+.child{width: 200px; margin: 0 auto;}
+优点：兼容性好缺点: 需要指定宽度
+
+(3)使用table实现
+.child{display: table; margin: 0 auto;}
+优点:只需要对自身进行设置不足:IE6,7需要调整结构
+
+(4)使用绝对定位实现
+.parent{position:relative;}
+/*或者实用margin-left的负值为盒子宽度的一半也可以实现，不过这样就必须知道盒子的宽度，但兼容性好*/
+.child{position:absolute; left:50%; transform:translate(-50%);}
+不足：兼容性差,IE9及以上可用
+
+(5)实用flex布局实现
+/*第一种方法*/
+.parent{display:flex; justify-content:center;}
+/*第二种方法*/
+.parent{display:flex;}
+.child{margin:0 auto;}
+</pre>
+                        </div>
+                      </dd>
+                    </dl>
+                    <dl class="am-accordion-item">
+                      <dt class="am-accordion-title">
+                        垂直居中
+                      </dt>
+                      <dd class="am-accordion-bd am-collapse ">
+                        <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+                        <div class="am-accordion-content">
+<pre>
+vertical-align  对齐的基线是用行高的基线作为标记，故需要设置line-height或设置display:table-cell;
+/*第一种方法*/
+.parent{display:table-cell;vertical-align:middle;height:20px;}
+/*第二种方法*/
+.parent{display:inline-block;vertical-align:middle;line-height:20px;}
+
+实用绝对定位
+.parent{position:relative;}
+.child{positon:absolute; top:50%; transform:translate(0,-50%);}
+
+实用flex实现
+.parent{display:flex; align-items:center;}
+</pre>
+                        </div>
+                      </dd>
+                    </dl>
+                    <dl class="am-accordion-item">
+                      <dt class="am-accordion-title">
+                        水平垂直全部居中
+                      </dt>
+                      <dd class="am-accordion-bd am-collapse ">
+                        <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+                        <div class="am-accordion-content">
+<pre>
+利用vertical-align,text-align,inline-block实现
+.parent{display:table-cell; vertical-align:middle; text-align:center;}
+.child{display:inline-block;}
+
+利用绝对定位实现
+.parent{position:relative;}
+.child{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);}
+
+利用flex实现
+.parent{display:flex;justify-content:center;align-items:center;}
+</pre>
+                        </div>
+                      </dd>
+                    </dl>
+                  </div>
+                </dd>
+              </dl>
+              <dl class="am-accordion-item">
+                <dt class="am-accordion-title">
+                  2.多列布局
+                </dt>
+                <dd class="am-accordion-bd am-collapse ">
+                  <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+                  <div class="am-accordion-content">
+                    <dl class="am-accordion-item">
+                      <dt class="am-accordion-title">
+                        1.左列定宽，右列自适应
+                      </dt>
+                      <dd class="am-accordion-bd am-collapse ">
+                        <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+                        <div class="am-accordion-content">
+<pre>
+该布局方式非常常见，适用于定宽的一侧常为导航，自适应的一侧为内容的布局
+
+利用float+margin实现
+.left{float:left;width:100px;}
+.right{margin-left:100px;}
+注：IE6会有3px的bug
+
+利用float+margin(fix)实现
+&lt;div class="parent">
+    &lt;div class="left">&lt;/div>
+    &lt;div class="right-fix">
+        &lt;div class="right">&lt;/div>
+    &lt;/div>
+&lt;/div>
+.left{width:100px;float:left;}
+.right-fix{width:100%;margin-left:-100px;float:right;}
+.right{margin-left:100px;}
+
+使用float+overflow实现
+.left{width:100px;float:left;}
+.right{overflow:hidden;}
+overflow:hidden，触发bfc模式，浮动无法影响，隔离其他元素，IE6不支持，左侧left设置margin-left当作left与right之间的边距，右侧利用overflow:hidden 进行形成bfc模式如果我们需要将两列设置为等高，可以用下述方法将“背景”设置为等高，其实并不是内容的等高
+.left{width:100px;float:left;}
+.right{overflow:hidden;}
+.parent{overflow:hidden;}
+.left,.right{padding-bottom:9999px;margin-bottom:-9999px;}
+
+使用table实现
+.parent{display:table;table-layout:fixed;width:100%;}
+.left{width:100px;}
+.right,.left{display:table-cell;}
+
+实用flex实现
+.parent{display:flex;}
+.left{width:100px;}
+.right{flex:1;}
+利用右侧容器的flex:1，均分了剩余的宽度，也实现了同样的效果。而align-items 默认值为stretch，故二者高度相等
+
+</pre>
+                        </div>
+                      </dd>
+                    </dl>
+                    <dl class="am-accordion-item">
+                      <dt class="am-accordion-title">
+                        2.右列定宽，左列自适应
+                      </dt>
+                      <dd class="am-accordion-bd am-collapse ">
+                        <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+                        <div class="am-accordion-content">
+<pre>
+实用float+margin实现
+.parent{background:red;height:100px;margin:0 auto;}
+.left{background:green;margin-right:-100px;width:100%;float:left;}
+.right{float:right;width:100px;background:blue;}
+
+使用table实现
+.parent{display:table;table-layout:fixed;width:100%;}
+.left{display:table-cell;}
+.right{width:100px;display:table-cell;}
+
+实用flex实现
+.parent{display:flex;}
+.left{flex:1;}
+.right{width:100px;}
+</pre>
+                        </div>
+                      </dd>
+                    </dl>
+                    <dl class="am-accordion-item">
+                      <dt class="am-accordion-title">
+                        3.两列定宽，一列自适应
+                      </dt>
+                      <dd class="am-accordion-bd am-collapse ">
+                        <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+                        <div class="am-accordion-content">
+<pre>
+基本html结构为父容器为parent,自容器为left,center,right.其中，left,center定宽，right自适应
+利用float+margin实现
+.left,.center{float:left:width:200px;}
+.right{margin-left:400px;}
+
+利用float+overflow实现
+.left,.center{float:left:width:200px;}
+.right{overflow:hidden;}
+
+利用table实现
+.parent{display:table;table-layout:fixed;width:100%;}
+.left,.center,.right{display:table-cell;}
+.left,.center{width:200px;}
+
+利用flex实现
+.parent{display:flex;}
+.left,.center{width:100px;}
+.right{flex:1}
+</pre>
+                        </div>
+                      </dd>
+                    </dl>
+                    <dl class="am-accordion-item">
+                      <dt class="am-accordion-title">
+                        4.两侧定宽，中栏自适应
+                      </dt>
+                      <dd class="am-accordion-bd am-collapse ">
+                        <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+                        <div class="am-accordion-content">
+<pre>
+利用float+margin实现
+.left{width：100px;float:left;}
+.center{float:left;width:100%;margin-right:-200px;}
+.right{width:100px;float:right;}
+
+利用table实现
+.parent{width:100%;display:table;table-layout:fixed}
+.left,.center,.right{display:table-cell;}
+.left{width:100px;}
+.right{width:100px;}
+
+利用flex实现
+.parent{display:flex;}
+.left{width:100px;}
+.center{flex:1;}
+.right{width:100px;}
+</pre>
+                        </div>
+                      </dd>
+                    </dl>
+                    <dl class="am-accordion-item">
+                      <dt class="am-accordion-title">
+                        5.一列不定宽，一列自适应
+                      </dt>
+                      <dd class="am-accordion-bd am-collapse ">
+                        <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+                        <div class="am-accordion-content">
+<pre>
+利用float+overflow实现
+.left{float:left;}
+.right{overflow:hidden;}
+
+利用table实现
+.parent{display:table;table-layout:fixed;width:100%;}
+.left{width:0.1%;}
+.left,.right{display:table-cell;}
+
+利用flex实现
+.parent{display:flex;}
+.right{flex:1;}
+</pre>
+                        </div>
+                      </dd>
+                    </dl>
+                    <dl class="am-accordion-item">
+                      <dt class="am-accordion-title">
+                        6.多列等分布局
+                      </dt>
+                      <dd class="am-accordion-bd am-collapse ">
+                        <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+                        <div class="am-accordion-content">
+<pre>
+多列等分布局常出现在内容中，多数为功能的，同阶级内容的并排显示等。
+
+html结构如下所示
+
+&lt;div class="parent">
+    &lt;div class="column">1&lt;/div>
+    &lt;div class="column">1&lt;/div>
+    &lt;div class="column">1&lt;/div>
+    &lt;div class="column">1&lt;/div>
+&lt;/div>
+
+实用float实现
+.parent{margin-left:-20px}/*假设列之间的间距为20px*/
+.column{float:left;width:25%;padding-left:20px;box-sizing:border-box;}
+
+利用table实现
+.parent-fix{margin-left:-20px;}
+.parent{display:table;table-layout:fixed;width:100%;}
+.column{display:table-cell;padding-left:20px;}
+
+利用flex实现
+.parent{display:flex;}
+.column{flex:1;}
+.column+.column{margin-left:20px;}
+</pre>
+                        </div>
+                      </dd>
+                    </dl>
+                    <dl class="am-accordion-item">
+                      <dt class="am-accordion-title">
+                        7.九宫格布局
+                      </dt>
+                      <dd class="am-accordion-bd am-collapse ">
+                        <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+                        <div class="am-accordion-content">
+<pre>
+使用table实现
+
+&lt;div class="parent">
+      &lt;div class="row">&lt;div class="item">&lt;/div>&lt;div class="item">&lt;/div>&lt;div class="item">&lt;/div>&lt;/div>
+      &lt;div class="row">&lt;div class="item">&lt;/div>&lt;div class="item">&lt;/div>&lt;div class="item">&lt;/div>&lt;/div>
+      &lt;div class="row">&lt;div class="item">&lt;/div>&lt;div class="item">&lt;/div>&lt;div class="item">&lt;/div>&lt;/div>
+  &lt;/div>
+.parent{display:table;table-layout:fixed;width:100%;}
+.row{display:table-row;}
+.item{display:table-cell;width:33.3%;height:200px;}
+
+实用flex实现
+&lt;div class="parent">
+&lt;div class="row">&lt;div class="item">&lt;/div>&lt;div class="item">&lt;/div>&lt;div class="item">&lt;/div>&lt;/div>
+&lt;div class="row">&lt;div class="item">&lt;/div>&lt;div class="item">&lt;/div>&lt;div class="item">&lt;/div>&lt;/div>
+&lt;div class="row">&lt;div class="item">&lt;/div>&lt;div class="item">&lt;/div>&lt;div class="item">&lt;/div>&lt;/div>
+&lt;/div>
+.parent{display:flex;flex-direction:column;}
+.row{height:100px;display:flex;}
+.item{width:100px;background:red;}
+</pre>
+                        </div>
+                      </dd>
+                    </dl>
+      </div>
+                </dd>
+              </dl>
+              <dl class="am-accordion-item">
+                <dt class="am-accordion-title">
+                  3.全屏布局
+                </dt>
+                <dd class="am-accordion-bd am-collapse ">
+                  <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+                  <div class="am-accordion-content">
+<pre>
+利用绝对定位实现
+&lt;div class="parent">
+&lt;div class="top">top&lt;/div>
+&lt;div class="left">left&lt;/div>
+&lt;div class="right">right&lt;/div>
+&lt;div class="bottom">bottom&lt;/div>
+&lt;/div>
+html,body,parent{height:100%;overflow:hidden;}
+.top{position:absolute:top:0;left:0;right:0;height:100px;}
+.left{position:absolute;top:100px;left:0;bottom:50px;width:200px;}
+.right{position:absolute;overflow:auto;left:200px;right:0;top:100px;bottom:50px;}
+.bottom{position:absolute;left:0;right:0;bottom:0;height:50px;}
+
+利用flex实现
+
+&lt;div class="parent">
+  &lt;div class="top">top&lt;/div>
+  &lt;div class="middle">
+    &lt;div class="left">left&lt;/div>
+    &lt;div class="right">right&lt;/div>
+  &lt;/div>
+  &lt;div class="bottom">bottom&lt;/div>
+&lt;/div>
+.parent{display:flex;flex-direction:column;}
+.top{height:100px;}
+.bottom{height:50px;}
+.middle{flex:1;display:flex;}
+.left{width:200px;}
+.right{flex:1;overflow:auto;}
+</pre>
+                  </div>
+                </dd>
+              </dl>
+               <dl class="am-accordion-item">
+                <dt class="am-accordion-title">
+                  4.响应式布局
+                </dt>
+                <dd class="am-accordion-bd am-collapse ">
+                  <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+                  <div class="am-accordion-content">
+<pre>
+meta标签的实用
+设置布局宽度等于设备宽度，布局viewport等于度量viewport
+
+&lt;meta name="viewport" content="width=device-width,initial-scale=1">
+语法
+@media screen and (max-width:960px){....}
+&lt;link rel="stylesheet" media="screen and (max-width:960px)" href='xxx.css' />
+</pre>
+                  </div>
+                </dd>
+              </dl>
+          </div>
+        </dd>
+      </dl>
+      <dl class="am-accordion-item">
+        <dt class="am-accordion-title">
+          24.px和em的区别
+        </dt>
+        <dd class="am-accordion-bd am-collapse ">
+          <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+          <div class="am-accordion-content">
+           px和em都是长度单位<br>
+           px的值是固定的，指定是多少就是多少，计算比较容易。<br>
+           em得值不是固定的，并且em会继承父级元素的字体大小。<br>
+           浏览器的默认字体高都是16px。所以未经调整的浏览器都符合: 1em=16px。那么12px=0.75em, 10px=0.625em
+
+          </div>
+        </dd>
+      </dl>
+      <dl class="am-accordion-item">
+        <dt class="am-accordion-title">
+          14.href和src有什么区别？
+        </dt>
+        <dd class="am-accordion-bd am-collapse ">
+          <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+          <div class="am-accordion-content">
+            <dl class="am-accordion-item">
+              <dt class="am-accordion-title">
+                1.href
+              </dt>
+              <dd class="am-accordion-bd am-collapse ">
+                <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+                <div class="am-accordion-content">
+                   引入和引用
+                </div>
+              </dd>
+            </dl>
+            <dl class="am-accordion-item">
+              <dt class="am-accordion-title">
+                2.src
+              </dt>
+              <dd class="am-accordion-bd am-collapse ">
+                <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+                <div class="am-accordion-content">
+                   引入和引用
+                </div>
+              </dd>
+            </dl>
+          </div>
+        </dd>
+      </dl>
+
+    </dd>
+  </section>
+
+  <section data-am-widget="accordion" class="am-accordion am-accordion-gapped" data-am-accordion='{  }'>
+    <h2  class="am-accordion-title">JavaScript</h2>
+    <dd class="am-accordion-bd am-collapse ">
+      <dl class="am-accordion-item">
+        <dt class="am-accordion-title">
+          <span style="display: inline-block;width: 20px;height: 20px;background:black ;border-radius: 5px;text-align: center;line-height: 20px;color:white;">JS</span>原生JavaScript
+        </dt>
+        <dd class="am-accordion-bd am-collapse ">
+          <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+          <div class="am-accordion-content">
+             <dl class="am-accordion-item">
+                  <dt class="am-accordion-title">
+                    1、添加、移除、移动、复制、创建和查找节点
+                  </dt>
+                  <dd class="am-accordion-bd am-collapse ">
+                    <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+                    <div class="am-accordion-content">
+                      <pre>
+ 1）创建新节点
+    createDocumentFragment() //创建一个DOM片段
+    createElement() //创建一个具体的元素
+    createTextNode() //创建一个文本节点
+  2）添加、移除、替换、插入
+    appendChild() //添加
+    removeChild() //移除
+    replaceChild() //替换
+    insertBefore() //插入
+  3）查找
+    getElementsByTagName() //通过标签名称
+    getElementsByName() //通过元素的Name属性的值
+    getElementById() //通过元素Id，唯一性
+                      </pre>
+                    </div>
+                  </dd>
+                </dl>
+
+                <dl class="am-accordion-item">
+              <dt class="am-accordion-title">
+                2、实现一个函数clone，可以对JavaScript中的5种主要的数据类型（包括Number、String、Object、Array、Boolean）进行值复制
+
+              </dt>
+              <dd class="am-accordion-bd am-collapse ">
+                <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+                <div class="am-accordion-content">
+                   <pre>
+function clone(obj) {
+    var o;
+    switch (typeof obj) {
+        case "undefined":break;
+        case "string":o = obj + "";break;
+        case "number":o = obj - 0;break;
+        case "boolean": o = obj;break;
+        case "object": // object 分为两种情况 对象（Object）或数组（Array）
+            if (obj === null) {
+                o = null;
+            } else {
+                if (Object.prototype.toString.call(obj).slice(8, -1) === "Array") {
+                    o = [];
+                    for (var i = 0; i < obj.length; i++) {
+                        o.push(clone(obj[i]));
+                    }
+                } else {
+                    o = {};
+                    for (var k in obj) {
+                        o[k] = clone(obj[k]);
+                    }
+                }
+            }
+            break;
+        default:
+            o = obj;
+            break;
+    }
+    return o;
+}
+                   </pre>
+                </div>
+              </dd>
+            </dl>
+
+
+            <dl class="am-accordion-item">
+              <dt class="am-accordion-title">
+                3、如何消除一个数组里面重复的元素？
+              </dt>
+              <dd class="am-accordion-bd am-collapse ">
+                <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+                <div class="am-accordion-content"><pre>
+function unique(array){
+    var n = [];//一个新的临时数组
+    //遍历当前数组
+    for(var i=0; i<\array.length; i++){
+        //如果当前数组的第i已经保存进了临时数组，那么跳过，
+        //否则把当前项push到临时数组里面
+        if(n.indexOf(array[i]) == -1){
+        console.log(n.indexOf(array[i]));
+            n.push(array[i]);
+        }
+    }
+    return n;
+}
+// 方法一：
+var arr1 =[1,2,2,2,3,3,3,4,5,6],
+    arr2 = [];
+for(var i = 0,len = arr1.length; i< len; i++){
+    if(arr2.indexOf(arr1[i]) < 0){
+        arr2.push(arr1[i]);
+    }
+}
+document.write(arr2); // 1,2,3,4,5,6
+// 方法二
+var arr1 =[1,2,2,2,3,3,3,4,5,6],
+    arr2 = [];
+for(var i = 0;i< arr1.length; i++){
+    if(arr2.lastIndexOf(arr1[i]) < 0){
+        arr2.push(arr1[i]);
+    }
+}
+document.write(arr2);
+
+var data1 = ['blue', 'red', 'green', 'blue'];
+
+function UniqueData(data) {
+    data = data1.sort();
+    for (var i = 0; i < data.length; i++) {
+        if (data[i] === data[i + 1]) {
+            data.splice(i, 1);
+        }
+    }
+
+    return data;
+}
+UniqueData(data);
+
+var data = ['blue', 'red', 'green', 'blue'];
+
+function UniqueData(data) {
+    for (var i = 0; i < data.length; i++) {
+        for (j = i + 1; j < data.length; j++) {
+            if (data[i] === data[j]) {
+                data.splice(j, 1);
+            }
+        }
+    }
+
+    return data;
+}
+UniqueData(data);
+
+var data = ['blue', 'red', 'green', 'blue'];
+
+function newData(data) {
+    var nData = new Array();
+    for (var i = 0; i < data.length; i++) {
+        if (nData.indexOf(data[i]) == -1) {
+            nData.push(data[i]);
+        }
+    }
+    return nData;
+}
+newData(data);</pre>
+                </div>
+              </dd>
+            </dl>
+
+            <dl class="am-accordion-item">
+              <dt class="am-accordion-title">
+                4、闭包
+              </dt>
+              <dd class="am-accordion-bd am-collapse ">
+                <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+                <div class="am-accordion-content">
+                   <pre>
+第一种理解(红宝书)：是指有权访问另一个函数作用域中的变量的函数，创建闭包的最常见的方式就是在一个函数内创建另一个函数，通过另一个函数访问这个函数的局部变量
+第二种理解(你不知道的js)：当函数可以记住并访问所在的语法作用域时，就产生了闭包，这个函数持有对该语法作用域的引用，这个引用就叫做闭包
+闭包本质还是函数，只不过这个函数绑定了上下文环境(函数内部引用的所有变量)
+
+缺点：常驻内存，会增大内存使用量，使用不当很容易造成内存泄漏。
+作用(使用场景)：可以用来管理私有变量和私有方法，将对变量(状态)的变化封装在安全的环境中，使得这些变量不能被外部随意修改，同时又可以通过指定的函数接口来操作。
+闭包的三个特性：
+1.函数嵌套函数
+2.函数内部可以引用外部的参数和变量
+3.参数和变量不会被垃圾回收机制回收
+                   </pre>
+                </div>
+              </dd>
+            </dl>
+
+             <dl class="am-accordion-item">
+              <dt class="am-accordion-title">
+                5、new操作符具体干了什么
+              </dt>
+              <dd class="am-accordion-bd am-collapse ">
+                <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+                <div class="am-accordion-content">
+                   <pre>
+1.创建一个新对象
+2.将构造函数的作用域赋给新对象(因此this就指向了这个新对象)
+3.执行构造函数中的代码(为这个新对象添加属性)
+4.返回新对象
+                   </pre>
+                </div>
+              </dd>
+            </dl>
+
+
+            <dl class="am-accordion-item">
+              <dt class="am-accordion-title">
+                6、call、apply、bind的区别
+              </dt>
+              <dd class="am-accordion-bd am-collapse ">
+                <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+                <div class="am-accordion-content">
+                  三者都是用来改变函数的this对象的指向的。<br>
+                  三者第一个参数都是this要指向的对象，也就是想指定的上下文。<br>
+                  call传入的参数数量不固定，第二部分参数要一个一个传，用，隔开。<br>
+                  apply接受两个参数，第二个参数为一个带下标的集合，可以为数组，也可以为类数组。<br>
+                  bind是返回一个改变了上下文的函数副本，便于稍后调用；apply、call则是立即调用
+                </div>
+              </dd>
+            </dl>
+
+
+            <dl class="am-accordion-item">
+              <dt class="am-accordion-title">
+                7、线程与进程的区别
+              </dt>
+              <dd class="am-accordion-bd am-collapse ">
+                <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+                <div class="am-accordion-content">
+                   <pre>
+1.一个程序至少有一个进程，一个进程至少有一个线程。
+2.线程的划分尺度小于进程，使得多线程程序的并发性高。
+3.进程在执行过程中拥有独立的内存单元，而多个线程共享内存，从而极大地提高了程序的运行效率。
+4.线程在执行过程中与进程还是有区别的。每个独立的线程有一个程序运行的入口，顺序执行序列号程序的出口。但是线程不能独立执行，必须依存在应用程序中，由应用程序提供多个线程执行控制。
+5.从逻辑角度来看，多线程的意义在于一个应用程序中，有多个执行部分可以同时执行，但操作系统并没有将多个线程看做多个独立的应用，来实现进程的调度和管理以及资源分配。这就是进程和线程的重要区别。
+                   </pre>
+                </div>
+              </dd>
+            </dl>
+
+            <dl class="am-accordion-item">
+              <dt class="am-accordion-title">
+                8、前端面试
+              </dt>
+              <dd class="am-accordion-bd am-collapse ">
+                <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+                <div class="am-accordion-content">
+ <pre>
+for (var i = 0; i < 5; i++) {
+ setTimeout(function() {
+ console.log(new Date, i);
+ }, 1000);
+}
+
+console.log(new Date, i);
+这段代码很短，只有 7 行，我想，能读到这里的同学应该不需要我逐行解释这段代码在做什么吧。候选人面对这段代码时给出的结果也不尽相同，以下是典型的答案：
+
+A. 20% 的人会快速扫描代码，然后给出结果：0,1,2,3,4,5；
+B. 30% 的人会拿着代码逐行看，然后给出结果：5,0,1,2,3,4；
+C. 50% 的人会拿着代码仔细琢磨，然后给出结果：5,5,5,5,5,5；
+只要你对 JS 中同步和异步代码的区别、变量作用域、闭包等概念有正确的理解，就知道正确答案是 C，代码的实际输出是：
+
+2017-03-18T00:43:45.873Z 5
+2017-03-18T00:43:46.866Z 5
+2017-03-18T00:43:46.868Z 5
+2017-03-18T00:43:46.868Z 5
+2017-03-18T00:43:46.868Z 5
+2017-03-18T00:43:46.868Z 5
+接下来我会追问：如果我们约定，用箭头表示其前后的两次输出之间有 1 秒的时间间隔，而逗号表示其前后的两次输出之间的时间间隔可以忽略，代码实际运行的结果该如何描述？会有下面两种答案：
+
+A. 60% 的人会描述为：5 -> 5 -> 5 -> 5 -> 5，即每个 5 之间都有 1 秒的时间间隔；
+B. 40% 的人会描述为：5 -> 5,5,5,5,5，即第 1 个 5 直接输出，1 秒之后，输出 5 个 5；
+这就要求候选人对 JS 中的定时器工作机制非常熟悉，循环执行过程中，几乎同时设置了 5 个定时器，一般情况下，这些定时器都会在 1 秒之后触发，而循环完的输出是立即执行的，显而易见，正确的描述是 B。
+
+如果到这里算是及格的话，100 个人参加面试只有 20 人能及格，读到这里的同学可以仔细思考，你及格了么？
+
+追问 1：闭包
+如果这道题仅仅是考察候选人对 JS 异步代码、变量作用域的理解，局限性未免太大，接下来我会追问，如果期望代码的输出变成：5 -> 0,1,2,3,4，该怎么改造代码？熟悉闭包的同学很快能给出下面的解决办法：
+
+for (var i = 0; i < 5; i++) {
+ (function(j) { // j = i
+ setTimeout(function() {
+ console.log(new Date, j);
+ }, 1000);
+ })(i);
+}
+
+console.log(new Date, i);
+巧妙的利用 IIFE（Immediately Invoked Function Expression：声明即执行的函数表达式）来解决闭包造成的问题，确实是不错的思路，但是初学者可能并不觉得这样的代码很好懂，至少笔者初入门的时候这里琢磨了一会儿才真正理解。
+
+增补：如果有同学给出如下的解决方案，则说明他是一个仔细看API 文档的人，这种习惯会让他学习的时候少走弯路，具体代码如下：
+
+for (var i = 0; i < 5; i++) {
+ setTimeout(function(j) {
+ console.log(new Date, j);
+ }, 1000, i);
+}
+
+
+console.log(new Date, i);
+有没有更符合直觉的做法？答案是有，我们只需要对循环体稍做手脚，让负责输出的那段代码能拿到每次循环的 i 值即可。该怎么做呢？利用 JS 中基本类型（Primitive Type）的参数传递是按值传递（Pass by Value）的特征，不难改造出下面的代码：
+
+var output = function (i) {
+ setTimeout(function() {
+ console.log(new Date, i);
+ }, 1000);
+};
+
+for (var i = 0; i < 5; i++) {
+ output(i); // 这里传过去的 i 值被复制了
+}
+
+console.log(new Date, i);
+能给出上述 2 种解决方案的候选人可以认为对 JS 基础的理解和运用是不错的，可以各加 10 分。当然实际面试中还有候选人给出如下的代码：
+
+for (let i = 0; i < 5; i++) {
+ setTimeout(function() {
+ console.log(new Date, i);
+ }, 1000);
+}
+
+console.log(new Date, i);
+细心的同学会发现，这里只有个非常细微的变动，即使用 ES6 块级作用域（Block Scope）中的 let 替代了 var，但是代码在实际运行时会报错，因为最后那个输出使用的 i 在其所在的作用域中并不存在，i 只存在于循环内部。
+
+能想到 ES6 特性的同学虽然没有答对，但是展示了自己对 ES6 的了解，可以加 5 分，继续进行下面的追问。
+
+追问 2：ES6
+有经验的前端同学读到这里可能有些不耐烦了，扯了这么多，都是他知道的内容，先别着急，挑战的难度会继续增加。
+
+接着上文继续追问：如果期望代码的输出变成 0 -> 1 -> 2 -> 3 -> 4 -> 5，并且要求原有的代码块中的循环和两处 console.log 不变，该怎么改造代码？新的需求可以精确的描述为：代码执行时，立即输出 0，之后每隔 1 秒依次输出 1,2,3,4，循环结束后在大概第 5 秒的时候输出 5（这里使用大概，是为了避免钻牛角尖的同学陷进去，因为 JS 中的定时器触发时机有可能是不确定的，具体可参见 How Javascript Timers Work）。
+
+看到这里，部分同学会给出下面的可行解：
+
+for (var i = 0; i < 5; i++) {
+ (function(j) {
+ setTimeout(function() {
+ console.log(new Date, j);
+ }, 1000 * j); // 这里修改 0~4 的定时器时间
+ })(i);
+}
+
+setTimeout(function() { // 这里增加定时器，超时设置为 5 秒
+ console.log(new Date, i);
+}, 1000 * i);
+不得不承认，这种做法虽粗暴有效，但是不算是能额外加分的方案。如果把这次的需求抽象为：在系列异步操作完成（每次循环都产生了 1 个异步操作）之后，再做其他的事情，代码该怎么组织？聪明的你是不是想起了什么？对，就是 Promise。
+
+可能有的同学会问，不就是在控制台输出几个数字么？至于这样杀鸡用牛刀？你要知道，面试官真正想考察的是候选人是否具备某种能力和素质，因为在现代的前端开发中，处理异步的代码随处可见，熟悉和掌握异步操作的流程控制是成为合格开发者的基本功。
+
+顺着下来，不难给出基于 Promise 的解决方案（既然 Promise 是 ES6 中的新特性，我们的新代码使用 ES6 编写是不是会更好？如果你这么写了，大概率会让面试官心生好感）：
+
+const tasks = [];
+for (var i = 0; i < 5; i++) { // 这里 i 的声明不能改成 let，如果要改该怎么做？
+ ((j) => {
+ tasks.push(new Promise((resolve) => {
+ setTimeout(() => {
+ console.log(new Date, j);
+ resolve(); // 这里一定要 resolve，否则代码不会按预期 work
+ }, 1000 * j); // 定时器的超时时间逐步增加
+ }));
+ })(i);
+}
+
+Promise.all(tasks).then(() => {
+ setTimeout(() => {
+ console.log(new Date, i);
+ }, 1000); // 注意这里只需要把超时设置为 1 秒
+});
+相比而言，笔者更倾向于下面这样看起来更简洁的代码，要知道编程风格也是很多面试官重点考察的点，代码阅读时的颗粒度更小，模块化更好，无疑会是加分点。
+
+const tasks = []; // 这里存放异步操作的 Promise
+const output = (i) => new Promise((resolve) => {
+ setTimeout(() => {
+ console.log(new Date, i);
+ resolve();
+ }, 1000 * i);
+});
+
+// 生成全部的异步操作
+for (var i = 0; i < 5; i++) {
+ tasks.push(output(i));
+}
+
+// 异步操作完成之后，输出最后的 i
+Promise.all(tasks).then(() => {
+ setTimeout(() => {
+ console.log(new Date, i);
+ }, 1000);
+});
+读到这里的同学，恭喜你，你下次面试遇到类似的问题，至少能拿到 80 分。
+
+我们都知道使用 Promise 处理异步代码比回调机制让代码可读性更高，但是使用 Promise 的问题也很明显，即如果没有处理 Promise 的 reject，会导致错误被丢进黑洞，好在新版的 Chrome 和 Node 7.x 能对未处理的异常给出 Unhandled Rejection Warning，而排查这些错误还需要一些特别的技巧（浏览器、Node.js）。
+
+追问 3：ES7
+既然你都看到这里了，那就再坚持 2 分钟，接下来的内容会让你明白你的坚持是值得的。
+
+多数面试官在决定聘用某个候选人之前还需要考察另外一项重要能力，即技术自驱力，直白的说就是候选人像有内部的马达在驱动他，用漂亮的方式解决工程领域的问题，不断的跟随业务和技术变得越来越牛逼，究竟什么是牛逼？建议阅读程序人生的这篇剖析。
+
+回到正题，既然 Promise 已经被拿下，如何使用 ES7 中的 async/await 特性来让这段代码变的更简洁？你是否能够根据自己目前掌握的知识给出答案？请在这里暂停 1 分钟，思考下。
+
+下面是笔者给出的参考代码：
+
+// 模拟其他语言中的 sleep，实际上可以是任何异步操作
+const sleep = (timeountMS) => new Promise((resolve) => {
+ setTimeout(resolve, timeountMS);
+});
+
+(async () => { // 声明即执行的 async 函数表达式
+ for (var i = 0; i < 5; i++) {
+ if (i > 0) {
+ await sleep(1000);
+ }
+ console.log(new Date, i);
+ }
+
+ await sleep(1000);
+ console.log(new Date, i);
+})();
+总结
+感谢你花时间读到这里，相信你收获的不仅仅是用 JS 精确控制数字输出的各种技巧，而是各种技巧背后的知识，从宏观层面，则要明确合格前端工程师应该具备的特征：扎实的语言基础、与时俱进的能力、强大的技术自驱力，后续文章见。
+
+
+JS中的创建对象的方法
+//1.最基本
+var student = new Object();
+student.name = "easy";
+student.age = "20";
+
+//2.对象字面量
+var sutdent = {
+  name : "easy",
+  age : 20
+};
+
+//3.工厂模式创建对象
+function createStudent(name, age) {
+  var obj = new Object();
+  obj.name = name;
+  obj.age = age;
+  return obj;
+}
+
+//4.构造函数模式创建对象
+              </pre>
+                </div>
+              </dd>
+            </dl>
+
+            <dl class="am-accordion-item">
+                <dt class="am-accordion-title">
+                  9、作用域链的理解
+                </dt>
+                <dd class="am-accordion-bd am-collapse ">
+                  <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+                  <div class="am-accordion-content">
+                     作用域链的作用是保证执行环境里有权访问的变量和函数是有序的，作用域链的变量只能向上访问，变量访问到`window`对象即被终止，作用域链向下访问变量是不被允许的。
+                  </div>
+                </dd>
+            </dl>
+
+            <dl class="am-accordion-item">
+            <dt class="am-accordion-title">
+                 10.创建ajax过程
+            </dt>
+            <dd class="am-accordion-bd am-collapse ">
+              <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+              <div class="am-accordion-content">
+                 <pre>
+(1)创建XMLHttpRequest对象,也就是创建一个异步调用对象.
+(2)创建一个新的HTTP请求,并指定该HTTP请求的方法、URL及验证信息.
+(3)设置响应HTTP请求状态变化的函数.
+(4)发送HTTP请求.
+(5)获取异步调用返回的数据.
+(6)使用JavaScript和DOM实现局部刷新.
+                 </pre>
+              </div>
+            </dd>
+        </dl>
+
+        <dl class="am-accordion-item">
+            <dt class="am-accordion-title">
+                  11、Javascript垃圾回收方法
+            </dt>
+            <dd class="am-accordion-bd am-collapse ">
+              <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+              <div class="am-accordion-content">
+                 <pre>
+>标记清除（mark and sweep）
+
+这是JavaScript最常见的垃圾回收方式，当变量进入执行环境的时候，比如函数中声明一个变量，垃圾回收器将其标记为“进入环境”，当变量离开环境的时候（函数执行结束）将其标记为“离开环境”。
+
+垃圾回收器会在运行的时候给存储在内存中的所有变量加上标记，然后去掉环境中的变量以及被环境中变量所引用的变量（闭包），在这些完成之后仍存在标记的就是要删除的变量了
+
+>引用计数(reference counting)
+
+在低版本IE中经常会出现内存泄露，很多时候就是因为其采用引用计数方式进行垃圾回收。引用计数的策略是跟踪记录每个值被使用的次数，当声明了一个 变量并将一个引用类型赋值给该变量的时候这个值的引用次数就加1，如果该变量的值变成了另外一个，则这个值得引用次数减1，当这个值的引用次数变为0的时 候，说明没有变量在使用，这个值没法被访问了，因此可以将其占用的空间回收，这样垃圾回收器会在运行的时候清理掉引用次数为0的值占用的空间。
+
+在IE中虽然`JavaScript`对象通过标记清除的方式进行垃圾回收，但BOM与DOM对象却是通过引用计数回收垃圾的，
+也就是说只要涉及`BOM`及DOM就会出现循环引用问题。
+                 </pre>
+              </div>
+            </dd>
+        </dl>
+
+        <dl class="am-accordion-item">
+            <dt class="am-accordion-title">
+                  12.null和undefined的区别
+            </dt>
+            <dd class="am-accordion-bd am-collapse ">
+              <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+              <div class="am-accordion-content">
+                 <pre>
+`null`是一个表示"无"的对象，转为数值时为0；`undefined`是一个表示"无"的原始值，转为数值时为`NaN`。
+
+当声明的变量还未被初始化时，变量的默认值为`undefined`。
+`null`用来表示尚未存在的对象，常用来表示函数企图返回一个不存在的对象。
+`undefined`表示"缺少值"，就是此处应该有一个值，但是还没有定义。典型用法是：
+    （1）变量被声明了，但没有赋值时，就等于undefined。
+    （2) 调用函数时，应该提供的参数没有提供，该参数等于undefined。
+    （3）对象没有赋值的属性，该属性的值为undefined。
+    （4）函数没有返回值时，默认返回undefined。
+
+`null`表示"没有对象"，即该处不应该有值。典型用法是：
+    （1） 作为函数的参数，表示该函数的参数不是对象。
+    （2） 作为对象原型链的终点。
+                 </pre>
+              </div>
+            </dd>
+        </dl>
+
+        <dl class="am-accordion-item">
+            <dt class="am-accordion-title">
+                  13.js延迟加载的方式有哪些
+            </dt>
+            <dd class="am-accordion-bd am-collapse ">
+              <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+              <div class="am-accordion-content">
+                 defer和async、动态创建DOM方式（创建script，插入到DOM中，加载完毕后callBack）、按需异步载入js
+              </div>
+            </dd>
+        </dl>
+
+        <dl class="am-accordion-item">
+            <dt class="am-accordion-title">
+                  14.跨域
+            </dt>
+            <dd class="am-accordion-bd am-collapse ">
+              <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+              <div class="am-accordion-content">
+                 <dl class="am-accordion-item">
+                    <dt class="am-accordion-title">
+                          1、JSONP
+                    </dt>
+                    <dd class="am-accordion-bd am-collapse ">
+                      <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+                      <div class="am-accordion-content">
+                      <pre>
+原理是：动态插入`script`标签，通过`script`标签引入一个`js`文件，这个js文件载入成功后会执行我们在url参数中指定的函数，并且会把我们需要的`json`数据作为参数传入。
+
+由于同源策略的限制，`XmlHttpRequest`只允许请求当前源（域名、协议、端口）的资源，为了实现跨域请求，可以通过`script`标签实现跨域请求，然后在服务端输出JSON数据并执行回调函数，从而解决了跨域的数据请求。
+
+优点是兼容性好，简单易用，支持浏览器与服务器双向通信。缺点是只支持GET请求。
+
+`JSONP`：`json+padding`（内填充），顾名思义，就是把JSON填充到一个盒子里
+                      </pre>
+                      </div>
+                    </dd>
+                </dl>
+                <dl class="am-accordion-item">
+                    <dt class="am-accordion-title">
+                          2、CORS
+                    </dt>
+                    <dd class="am-accordion-bd am-collapse ">
+                      <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+                      <div class="am-accordion-content">
+                         CORS需要浏览器和服务器同时支持。目前，所有浏览器都支持该功能，IE浏览器不能低于IE10。
+服务器端对于`CORS`的支持，主要就是通过设置`Access-Control-Allow-Origin`来进行的。如果浏览器检测到相应的设置，就可以允许`Ajax`进行跨域的访问。
+                      </div>
+                    </dd>
+                </dl>
+
+                 <dl class="am-accordion-item">
+                    <dt class="am-accordion-title">
+                          3、通过修改document.domain来跨子域
+                    </dt>
+                    <dd class="am-accordion-bd am-collapse ">
+                      <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+                      <div class="am-accordion-content">
+                         将子域和主域的`document.domain`设为同一个主域.前提条件：这两个域名必须属于同一个基础域名!而且所用的协议，端口都要一致，否则无法利用`document.domain`进行跨域<br>
+                         主域相同的使用`document.domain`
+                      </div>
+                    </dd>
+                </dl>
+
+                <dl class="am-accordion-item">
+                    <dt class="am-accordion-title">
+                          4、使用window.name来进行跨域
+                    </dt>
+                    <dd class="am-accordion-bd am-collapse ">
+                      <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+                      <div class="am-accordion-content">
+                         `window`对象有个`name`属性，该属性有个特征：即在一个窗口(window)的生命周期内,窗口载入的所有的页面都是共享一个`window.name`的，每个页面对`window.name`都有读写的权限，`window.name`是持久存在一个窗口载入过的所有页面中的
+                      </div>
+                    </dd>
+                </dl>
+
+                 <dl class="am-accordion-item">
+                    <dt class="am-accordion-title">
+                          5、使用HTML5中新引进的`window.postMessage`方法来跨域传送数据
+                    </dt>
+                    <dd class="am-accordion-bd am-collapse ">
+                      <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+                      <div class="am-accordion-content">
+                        
+                      </div>
+                    </dd>
+                </dl>
+
+
+                 <dl class="am-accordion-item">
+                    <dt class="am-accordion-title">
+                          6、flash、在服务器上设置代理页面等跨域方式。
+                    </dt>
+                    <dd class="am-accordion-bd am-collapse ">
+                      <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+                      <div class="am-accordion-content">
+                         `window`对象有个`name`属性，该属性有个特征：即在一个窗口(window)的生命周期内,窗口载入的所有的页面都是共享一个`window.name`的，每个页面对`window.name`都有读写的权限，`window.name`是持久存在一个窗口载入过的所有页面中的
+                      </div>
+                    </dd>
+                </dl>
+          </div>
+        </dd>
+      </dl>
+      <dl class="am-accordion-item">
+            <dt class="am-accordion-title">
+                  15.栈和队列的区别
+            </dt>
+            <dd class="am-accordion-bd am-collapse ">
+              <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+              <div class="am-accordion-content">
+                 <pre>
+栈的插入和删除操作都是在一端进行的，而队列的操作却是在两端进行的。
+队列先进先出，栈先进后出。
+栈只允许在表尾一端进行插入和删除，而队列只允许在表尾一端进行插入，在表头一端进行删除
+                 </pre>
+              </div>
+            </dd>
+        </dl>
+
+         <dl class="am-accordion-item">
+            <dt class="am-accordion-title">
+                  16.栈和堆的区别
+            </dt>
+            <dd class="am-accordion-bd am-collapse ">
+              <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+              <div class="am-accordion-content">
+                 <pre>
+栈区（stack）—   由编译器自动分配释放   ，存放函数的参数值，局部变量的值等。
+堆区（heap）   —   一般由程序员分配释放，   若程序员不释放，程序结束时可能由OS回收。
+堆（数据结构）：堆可以被看成是一棵树，如：堆排序；
+栈（数据结构）：一种先进后出的数据结构。
+                 </pre>
+              </div>
+            </dd>
+        </dl>
+
+         
+
+        
+
+         <dl class="am-accordion-item">
+            <dt class="am-accordion-title">
+                  17.快速排序的思想,并实现一个快排
+            </dt>
+            <dd class="am-accordion-bd am-collapse ">
+              <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+              <div class="am-accordion-content">
+        <pre>
+"快速排序"的思想很简单，整个排序过程只需要三步：
+（1）在数据集之中，找一个基准点
+（2）建立两个数组，分别存储左边和右边的数组
+（3）利用递归进行下次比较
+
+
+function quickSort(arr){
+    if(arr.length<=1){
+        return arr;//如果数组只有一个数，就直接返回；
+    }
+
+    var num = Math.floor(arr.length/2);//找到中间数的索引值，如果是浮点数，则向下取整
+
+    var numValue = arr.splice(num,1);//找到中间数的值
+    var left = [];
+    var right = [];
+
+    for(var i=0;i<\arr.length;i++){
+        if(arr[i]<\numValue){
+            left.push(arr[i]);//基准点的左边的数传到左边数组
+        }
+        else{
+           right.push(arr[i]);//基准点的右边的数传到右边数组
+        }
+    }
+
+    return quickSort(left).concat([numValue],quickSort(right));//递归不断重复比较
+}
+
+alert(quickSort([32,45,37,16,2,87]));//弹出“2,16,32,37,45,87”
+
+        </pre>
+              </div>
+            </dd>
+        </dl>
+
+
+
+         <dl class="am-accordion-item">
+            <dt class="am-accordion-title">
+                  18.jQuery或zepto源码有哪些写的好的地方
+            </dt>
+            <dd class="am-accordion-bd am-collapse ">
+              <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+              <div class="am-accordion-content">
+                 <pre>
+`jquery`源码封装在一个匿名函数的自执行环境中，有助于防止变量的全局污染，然后通过传入window对象参数，可以使window对象作为局部变量使用，好处是当`jquery`中访问window对象的时候，就不用将作用域链退回到顶层作用域了，从而可以更快的访问`window`对象。同样，传入`undefined`参数，可以缩短查找undefined时的作用域链。
+(function( window, undefined ) {
+     //用一个函数域包起来，就是所谓的沙箱
+     //在这里边var定义的变量，属于这个函数域内的局部变量，避免污染全局
+     //把当前沙箱需要的外部变量通过函数参数引入进来
+     //只要保证参数对内提供的接口的一致性，你还可以随意替换传进来的这个参数
+     window.jQuery = window.$ = jQuery;
+})( window );
+jquery将一些原型属性和方法封装在了`jquery.prototype`中，为了缩短名称，又赋值给了`jquery.fn`，这是很形象的写法。
+有一些数组或对象的方法经常能使用到，jQuery将其保存为局部变量以提高访问速度。
+`jquery`实现的链式调用可以节约代码，所返回的都是同一个对象，可以提高代码效率。
+                 </pre>
+              </div>
+            </dd>
+        </dl>
+        <dl class="am-accordion-item">
+            <dt class="am-accordion-title">
+                  19.ES6的了解
+            </dt>
+            <dd class="am-accordion-bd am-collapse ">
+              <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+              <div class="am-accordion-content">
+                 <pre>
+新增模板字符串（为JavaScript提供了简单的字符串插值功能）、箭头函数（操作符左边为输入的参数，而右边则是进行的操作以及返回的值`Inputs=>outputs`。）、`for-of`（用来遍历数据—例如数组中的值。）`arguments`对象可被不定参数和默认参数完美代替。`ES6`将`promise`对象纳入规范，提供了原生的`Promise`对象。增加了`let`和`const`命令，用来声明变量。增加了块级作用域。let命令实际上就增加了块级作用域。ES6规定，`var`命令和`function`命令声明的全局变量，属于全局对象的属性；`let`命令、`const`命令、`class`命令声明的全局变量，不属于全局对象的属性。。还有就是引入`module`模块的概念
+
+                 </pre>
+              </div>
+            </dd>
+        </dl>
+        <dl class="am-accordion-item">
+            <dt class="am-accordion-title">
+                  20.js继承方式及其优缺点
+            </dt>
+            <dd class="am-accordion-bd am-collapse ">
+              <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+              <div class="am-accordion-content">
+                 <dl class="am-accordion-item">
+                    <dt class="am-accordion-title">
+                          原型链继承的缺点
+                    </dt>
+                    <dd class="am-accordion-bd am-collapse ">
+                      <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+                      <div class="am-accordion-content">
+                         字面量重写原型会中断关系，使用引用类型的原型，并且子类型还无法给超类型传递参数。
+                      </div>
+                    </dd>
+                </dl>
+                 <dl class="am-accordion-item">
+                    <dt class="am-accordion-title">
+                          借用构造函数（类式继承）
+                    </dt>
+                    <dd class="am-accordion-bd am-collapse ">
+                      <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+                      <div class="am-accordion-content">
+                         借用构造函数虽然解决了刚才两种问题，但没有原型，则复用无从谈起。所以我们需要原型链+借用构造函数的模式，这种模式称为组合继承
+                      </div>
+                    </dd>
+                </dl>
+                 <dl class="am-accordion-item">
+                    <dt class="am-accordion-title">
+                          组合式继承
+                    </dt>
+                    <dd class="am-accordion-bd am-collapse ">
+                      <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+                      <div class="am-accordion-content">
+                         组合式继承是比较常用的一种继承方法，其背后的思路是 使用原型链实现对原型属性和方法的继承，而通过借用构造函数来实现对实例属性的继承。这样，既通过在原型上定义方法实现了函数复用，又保证每个实例都有它自己的属性。
+                      </div>
+                    </dd>
+                </dl>
+              </div>
+            </dd>
+        </dl>
+        <dl class="am-accordion-item">
+            <dt class="am-accordion-title">
+                  21.defer和async
+            </dt>
+            <dd class="am-accordion-bd am-collapse ">
+              <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+              <div class="am-accordion-content">
+                 <pre>
+>defer并行加载js文件，会按照页面上script标签的顺序执行
+>async并行加载js文件，下载完成立即执行，不会按照页面上script标签的顺序执行
+                 </pre>
+              </div>
+            </dd>
+        </dl>
+        <dl class="am-accordion-item">
+            <dt class="am-accordion-title">
+                  22.浮动和清除浮动
+            </dt>
+            <dd class="am-accordion-bd am-collapse ">
+              <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+              <div class="am-accordion-content">
+                 <pre>
+浮动的框可以向左或向右移动，直到他的外边缘碰到包含框或另一个浮动框的边框为止。由于浮动框不在文档的普通流中，所以文档的普通流的块框表现得就像浮动框不存在一样。浮动的块框会漂浮在文档普通流的块框上。
+                 </pre>
+              </div>
+            </dd>
+        </dl>
+        <dl class="am-accordion-item">
+            <dt class="am-accordion-title">
+                  23.如何评价AngularJS和BackboneJS
+            </dt>
+            <dd class="am-accordion-bd am-collapse ">
+              <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+              <div class="am-accordion-content">
+                 <pre>
+`backbone`具有依赖性，依赖`underscore.js`。`Backbone + Underscore + jQuery(or Zepto)` 就比一个`AngularJS` 多出了2 次HTTP请求.
+`Backbone`的`Model`没有与UI视图数据绑定，而是需要在View中自行操作DOM来更新或读取UI数据。`AngularJS`与此相反，Model直接与UI视图绑定，`Model`与UI视图的关系，通过`directive`封装，`AngularJS`内置的通用`directive`，就能实现大部分操作了，也就是说，基本不必关心`Model`与UI视图的关系，直接操作Model就行了，UI视图自动更新。
+
+
+`AngularJS`的`directive`，你输入特定数据，他就能输出相应UI视图。是一个比较完善的前端MVW框架，包含模板，数据双向绑定，路由，模块化，服务，依赖注入等所有功能，模板功能强大丰富，并且是声明式的，自带了丰富的 Angular 指令。
+                 </pre>
+              </div>
+            </dd>
+        </dl>
+        <dl class="am-accordion-item">
+            <dt class="am-accordion-title">
+                  24.用过哪些设计模式
+            </dt>
+            <dd class="am-accordion-bd am-collapse ">
+              <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+              <div class="am-accordion-content">
+                 <dl class="am-accordion-item">
+                    <dt class="am-accordion-title">
+                          工厂模式
+                    </dt>
+                    <dd class="am-accordion-bd am-collapse ">
+                      <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+                      <div class="am-accordion-content">
+                         <pre>
+主要好处就是可以消除对象间的耦合，通过使用工程方法而不是new关键字。将所有实例化的代码集中在一个位置防止代码重复
+工厂模式解决了重复实例化的问题 ，但还有一个问题,那就是识别问题，因为根本无法 搞清楚他们到底是哪个对象的实例。
+function createObject(name,age,profession){//集中实例化的函数var obj = new Object();
+    obj.name = name;
+    obj.age = age;
+    obj.profession = profession;
+    obj.move = function () {
+        return this.name + ' at ' + this.age + ' engaged in ' + this.profession;
+    };
+    return obj;
+}
+var test1 = createObject('trigkit4',22,'programmer');//第一个实例
+var test2 = createObject('mike',25,'engineer');//第二个实例
+                         </pre>
+                      </div>
+                    </dd>
+                </dl>
+                 <dl class="am-accordion-item">
+                    <dt class="am-accordion-title">
+                          构造函数模式
+                    </dt>
+                    <dd class="am-accordion-bd am-collapse ">
+                      <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+                      <div class="am-accordion-content">
+                         <pre>
+使用构造函数的方法 ，即解决了重复实例化的问题 ，又解决了对象识别的问题，该模式与工厂模式的不同之处在于：
+ 1.构造函数方法没有显示的创建对象 (new Object());
+ 2.直接将属性和方法赋值给 this 对象;
+ 3.没有 renturn 语句。
+                         </pre>
+                      </div>
+                    </dd>
+                </dl>
+              </div>
+            </dd>
+        </dl>
+        <dl class="am-accordion-item">
+            <dt class="am-accordion-title">
+                  25.Cookie的弊端
+            </dt>
+            <dd class="am-accordion-bd am-collapse ">
+              <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+              <div class="am-accordion-content">
+                 <pre>
+`cookie`虽然在持久保存客户端数据提供了方便，分担了服务器存储的负担，但还是有很多局限性的。
+
+第一：每个特定的域名下最多生成20个`cookie`
+    1.IE6或更低版本最多20个cookie
+    2.IE7和之后的版本最后可以有50个cookie。
+    3.Firefox最多50个cookie
+    4.chrome和Safari没有做硬性限制
+
+`IE`和`Opera` 会清理近期最少使用的`cookie`，`Firefox`会随机清理`cookie`。
+
+`cookie`的最大大约为`4096`字节，为了兼容性，一般不能超过`4095`字节。
+
+IE 提供了一种存储可以持久化用户数据，叫做`userdata`，从`IE5.0`就开始支持。每个数据最多128K，每个域名下最多1M。这个持久化数据放在缓存中，如果缓存没有清理，那么会一直存在。
+
+优点：极高的扩展性和可用性
+
+
+
+    1.通过良好的编程，控制保存在cookie中的session对象的大小。
+
+    2.通过加密和安全传输技术（SSL），减少cookie被破解的可能性。
+
+    3.只在cookie中存放不敏感数据，即使被盗也不会有重大损失。
+
+    4.控制cookie的生命期，使之不会永远有效。偷盗者很可能拿到一个过期的cookie。
+
+
+>缺点：
+
+    1.`Cookie`数量和长度的限制。每个domain最多只能有20条cookie，每个cookie长度不能超过4KB，否则会被截掉.
+
+
+    2.安全性问题。如果cookie被人拦截了，那人就可以取得所有的session信息。即使加密也与事无补，因为拦截者并不需要知道cookie的意义，他只要原样转发cookie就可以达到目的了。
+
+    3.有些状态不可能保存在客户端。例如，为了防止重复提交表单，我们需要在服务器端保存一个计数器。如果我们把这个计数器保存在客户端，那么它起不到任何作用。
+                 </pre>
+              </div>
+            </dd>
+        </dl>
+        <dl class="am-accordion-item">
+            <dt class="am-accordion-title">
+                  26. cookie 和session 的区别：
+            </dt>
+            <dd class="am-accordion-bd am-collapse ">
+              <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+              <div class="am-accordion-content">
+                 <pre>
+
+     1、cookie数据存放在客户的浏览器上，session数据放在服务器上。
+
+     2、cookie不是很安全，别人可以分析存放在本地的COOKIE并进行COOKIE欺骗
+
+        考虑到安全应当使用session。
+
+     3、session会在一定时间内保存在服务器上。当访问增多，会比较占用你服务器的性能
+
+         考虑到减轻服务器性能方面，应当使用COOKIE。
+
+     4、单个cookie保存的数据不能超过4K，很多浏览器都限制一个站点最多保存20个cookie。
+
+     5、所以个人建议：
+
+        将登陆信息等重要信息存放为SESSION
+
+        其他信息如果需要保留，可以放在COOKIE中
+                 </pre>
+              </div>
+            </dd>
+        </dl>
+        <dl class="am-accordion-item">
+            <dt class="am-accordion-title">
+                  27.`display:none`和`visibility:hidden`的区别？
+            </dt>
+            <dd class="am-accordion-bd am-collapse ">
+              <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+              <div class="am-accordion-content">
+                 <pre>
+display:none  隐藏对应的元素，在文档布局中不再给它分配空间，它各边的元素会合拢，就当他从来不存在。
+
+    visibility:hidden  隐藏对应的元素，但是在文档布局中仍保留原来的空间。
+                 </pre>
+              </div>
+            </dd>
+        </dl>
+        <dl class="am-accordion-item">
+            <dt class="am-accordion-title">
+                  28.HTTP状态码
+            </dt>
+            <dd class="am-accordion-bd am-collapse ">
+              <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+              <div class="am-accordion-content">
+                 <pre>
+
+    100  Continue  继续，一般在发送post请求时，已发送了http header之后服务端将返回此信息，表示确认，之后发送具体参数信息
+    200  OK   正常返回信息
+    201  Created  请求成功并且服务器创建了新的资源
+    202  Accepted  服务器已接受请求，但尚未处理
+    301  Moved Permanently  请求的网页已永久移动到新位置。
+    302 Found  临时性重定向。
+    303 See Other  临时性重定向，且总是使用 GET 请求新的 URI。
+    304  Not Modified  自从上次请求后，请求的网页未修改过。
+    400 Bad Request  服务器无法理解请求的格式，客户端不应当尝试再次使用相同的内容发起请求。
+    401 Unauthorized  请求未授权。
+    403 Forbidden  禁止访问。
+    404 Not Found  找不到如何与 URI 相匹配的资源。
+    500 Internal Server Error  最常见的服务器端错误。
+    503 Service Unavailable 服务器端暂时无法处理请求（可能是过载或维护）。
+                 </pre>
+              </div>
+            </dd>
+        </dl>
+        <dl class="am-accordion-item">
+            <dt class="am-accordion-title">
+                  29.IE 与其他浏览器不一样的特性
+            </dt>
+            <dd class="am-accordion-bd am-collapse ">
+              <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+              <div class="am-accordion-content">
+                 <pre>
+- IE支持`currentStyle`，FIrefox使用`getComputStyle`
+
+- IE  使用`innerText`，Firefox使用`textContent`
+
+- 滤镜方面：IE:`filter:alpha(opacity= num)`；Firefox：`-moz-opacity:num`
+
+- 事件方面：IE：`attachEvent`：火狐是`addEventListener`
+
+- 鼠标位置：IE是`event.clientX`；火狐是`event.pageX`
+
+- IE使用`event.srcElement`；Firefox使用`event.target`
+
+- IE中消除list的原点仅需margin:0即可达到最终效果；FIrefox需要设置`margin:0;padding:0以及list-style:none`
+
+- CSS圆角：ie7以下不支持圆角
+                 </pre>
+              </div>
+            </dd>
+        </dl>
+
+        <dl class="am-accordion-item">
+            <dt class="am-accordion-title">
+                  30.javascript对象的几种创建方式
+            </dt>
+            <dd class="am-accordion-bd am-collapse ">
+              <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+              <div class="am-accordion-content">
+                 <pre>
+1，工厂模式
+2，构造函数模式
+3，原型模式
+4，混合构造函数和原型模式
+5，动态原型模式
+6，寄生构造函数模式
+7，稳妥构造函数模式
+                 </pre>
+              </div>
+            </dd>
+        </dl>
+         <dl class="am-accordion-item">
+            <dt class="am-accordion-title">
+                  31.javascript继承的6种方法
+            </dt>
+            <dd class="am-accordion-bd am-collapse ">
+              <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+              <div class="am-accordion-content">
+                 <pre>
+1，原型链继承
+2，借用构造函数继承
+3，组合继承(原型+借用构造)
+4，原型式继承
+5，寄生式继承
+6，寄生组合式继承
+                 </pre>
+              </div>
+            </dd>
+        </dl>
+         <dl class="am-accordion-item">
+            <dt class="am-accordion-title">
+                  32.创建ajax的过程
+            </dt>
+            <dd class="am-accordion-bd am-collapse ">
+              <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+              <div class="am-accordion-content">
+                 <pre>
+(1)创建`XMLHttpRequest`对象,也就是创建一个异步调用对象.
+
+    (2)创建一个新的`HTTP`请求,并指定该`HTTP`请求的方法、`URL`及验证信息.
+
+    (3)设置响应`HTTP`请求状态变化的函数.
+
+    (4)发送`HTTP`请求.
+
+    (5)获取异步调用返回的数据.
+
+    (6)使用JavaScript和DOM实现局部刷新.
+
+
+    var xmlHttp = new XMLHttpRequest();
+
+    xmlHttp.open('GET','demo.php','true');
+
+    xmlHttp.send()
+
+    xmlHttp.onreadystatechange = function(){
+
+        if(xmlHttp.readyState === 4 & xmlHttp.status === 200){
+
+        }
+
+    }
+                 </pre>
+              </div>
+            </dd>
+        </dl>
+        
+
+        <dl class="am-accordion-item">
+            <dt class="am-accordion-title">
+                  33.异步加载和延迟加载
+            </dt>
+            <dd class="am-accordion-bd am-collapse ">
+              <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+              <div class="am-accordion-content">
+                 <pre>
+    1.异步加载的方案： 动态插入script标签
+
+    2.通过ajax去获取js代码，然后通过eval执行
+
+    3.script标签上添加defer或者async属性
+
+    4.创建并插入iframe，让它异步执行js
+
+    5.延迟加载：有些 js 代码并不是页面初始化的时候就立刻需要的，而稍后的某些情况才需要的。
+                 </pre>
+              </div>
+            </dd>
+        </dl>
+
+        <dl class="am-accordion-item">
+            <dt class="am-accordion-title">
+                  34.GET和POST的区别，何时使用POST？
+            </dt>
+            <dd class="am-accordion-bd am-collapse ">
+              <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+              <div class="am-accordion-content">
+                 <pre>
+GET：一般用于信息获取，使用URL传递参数，对所发送信息的数量也有限制，一般在2000个字符
+
+        POST：一般用于修改服务器上的资源，对所发送的信息没有限制。
+
+
+        GET方式需要使用Request.QueryString来取得变量的值，而POST方式通过Request.Form来获取变量的值，
+
+        也就是说Get是通过地址栏来传值，而Post是通过提交表单来传值。
+
+
+
+    然而，在以下情况中，请使用 POST 请求：
+
+    无法使用缓存文件（更新服务器上的文件或数据库）
+
+    向服务器发送大量数据（POST 没有数据量限制）
+
+    发送包含未知字符的用户输入时，POST 比 GET 更稳定也更可靠
+                 </pre>
+              </div>
+            </dd>
+        </dl>
+
+       
+         <dl class="am-accordion-item">
+            <dt class="am-accordion-title">
+                  35.Promise的理解
+            </dt>
+            <dd class="am-accordion-bd am-collapse ">
+              <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+              <div class="am-accordion-content">
+                 <pre>
+ 依照 `Promise/A+` 的定义，`Promise` 有四种状态：
+  pending: 初始状态, 非 fulfilled 或 rejected.
+  fulfilled: 成功的操作.
+  rejected: 失败的操作.
+  settled: Promise已被fulfilled或rejected，且不是pending
+
+另外， `fulfilled` 与 `rejected` 一起合称 `settled`。
+
+
+`Promise` 对象用来进行延迟(deferred) 和异步(asynchronous ) 计算。
+
+>Promise 的构造函数
+构造一个 `Promise`，最基本的用法如下：
+
+```js
+  var promise = new Promise(function(resolve, reject) {
+
+      if (...) {  // succeed
+
+          resolve(result);
+
+      } else {   // fails
+
+          reject(Error(errMessage));
+
+      }
+  });
+```
+
+
+`Promise` 实例拥有 `then` 方法（具有 `then` 方法的对象，通常被称为 `thenable`）。它的使用方法如下：
+
+```js
+promise.then(onFulfilled, onRejected)
+```
+
+接收两个函数作为参数，一个在 `fulfilled` 的时候被调用，一个在 `rejected` 的时候被调用，接收参数就是 `future，onFulfilled` 对应 `resolve`, `onRejected` 对应 `reject`。
+                 </pre>
+              </div>
+            </dd>
+        </dl>
+         <dl class="am-accordion-item">
+            <dt class="am-accordion-title">
+                  36.严格模式的限制
+            </dt>
+            <dd class="am-accordion-bd am-collapse ">
+              <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+              <div class="am-accordion-content">
+                 <pre>
+变量必须声明后再使用
+
+    函数的参数不能有同名属性，否则报错
+
+    不能使用with语句
+
+    不能对只读属性赋值，否则报错
+
+    不能使用前缀0表示八进制数，否则报错
+
+    不能删除不可删除的属性，否则报错
+
+    不能删除变量delete prop，会报错，只能删除属性delete global[prop]
+
+    eval不会在它的外层作用域引入变量
+
+    eval和arguments不能被重新赋值
+
+    arguments不会自动反映函数参数的变化
+
+    不能使用arguments.callee
+
+    不能使用arguments.caller
+
+    禁止this指向全局对象
+
+    不能使用fn.caller和fn.arguments获取函数调用的堆栈
+
+    增加了保留字（比如protected、static和interface）
+
+
+
+    设立"严格模式"的目的，主要有以下几个：
+
+
+- 消除`Javascript`语法的一些不合理、不严谨之处，减少一些怪异行为;
+
+- 消除代码运行的一些不安全之处，保证代码运行的安全；
+
+- 提高编译器效率，增加运行速度；
+
+- 为未来新版本的`Javascript`做好铺垫。
+
+
+
+注：经过测试`IE6,7,8,9`均不支持严格模式。
+                 </pre>
+              </div>
+            </dd>
+        </dl>
+         <dl class="am-accordion-item">
+            <dt class="am-accordion-title">
+                  37.编写一个方法 求一个字符串的字节长度
+            </dt>
+            <dd class="am-accordion-bd am-collapse ">
+              <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+              <div class="am-accordion-content">
+                 <pre>
+  function GetBytes(str){
+
+        var len = str.length;
+
+        var bytes = len;
+
+        for(var i=0; i<\len; i++){
+
+            if (str.charCodeAt(i) > 255) bytes++;
+
+        }
+
+        return bytes;
+
+    }
+
+console.log(GetBytes("你好,as"));
+                 </pre>
+              </div>
+            </dd>
+        </dl>
+
+        <dl class="am-accordion-item">
+            <dt class="am-accordion-title">
+                  38.获取网页上次的浏览位置
+            </dt>
+            <dd class="am-accordion-bd am-collapse ">
+              <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+              <div class="am-accordion-content">
+                 <pre>
+①页面滚动，将滚动位置存到session中
+②再次进到页面中，到session中取出上次保存的浏览位置 →
+③滚动到对应位置
+
+//滚动时保存滚动位置
+$(window).scroll(function(){
+  if($(document).scrollTop()!=0){
+    　sessionStorage.setItem("offsetTop", $(window).scrollTop());//保存滚动位置
+  }
+});
+
+//onload时，取出并滚动到上次保存位置
+window.onload = function(){
+  　var _offset = sessionStorage.getItem("offsetTop");
+  　$(document).scrollTop(offsetTop);
+};
+                 </pre>
+              </div>
+            </dd>
+        </dl>
+
+        <dl class="am-accordion-item">
+            <dt class="am-accordion-title">
+                  39.事件委托的原理
+            </dt>
+            <dd class="am-accordion-bd am-collapse ">
+              <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+              <div class="am-accordion-content">
+                 <pre>
+ 事件委托是利用事件的冒泡原理来实现的
+                 </pre>
+              </div>
+            </dd>
+        </dl>
+
+        <dl class="am-accordion-item">
+            <dt class="am-accordion-title">
+                  40.为什么要用事件委托
+            </dt>
+            <dd class="am-accordion-bd am-collapse ">
+              <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+              <div class="am-accordion-content">
+                 <pre>
+一般来说，dom需要有事件处理程序，我们都会直接给它设事件处理程序就好了，那如果是很多的dom需要添加事件处理呢？比如我们有100个li，每个li都有相同的click点击事件，可能我们会用for循环的方法，来遍历所有的li，然后给它们添加事件，那这么做会存在什么影响呢？
+
+在JavaScript中，添加到页面上的事件处理程序数量将直接关系到页面的整体运行性能，因为需要不断的与dom节点进行交互，访问dom的次数越多，引起浏览器重绘与重排的次数也就越多，就会延长整个页面的交互就绪时间，这就是为什么性能优化的主要思想之一就是减少DOM操作的原因；如果要用事件委托，就会将所有的操作放到js程序里面，与dom的操作就只需要交互一次，这样就能大大的减少与dom的交互次数，提高性能；
+
+每个函数都是一个对象，是对象就会占用内存，对象越多，内存占用率就越大，自然性能就越差了（内存不够用，是硬伤，哈哈），比如上面的100个li，就要占用100个内存空间，如果是1000个，10000个呢，那只能说呵呵了，如果用事件委托，那么我们就可以只对它的父级（如果只有一个父级）这一个对象进行操作，这样我们就需要一个内存空间就够了，是不是省了很多，自然性能就会更好。
+适用以下场景：
+1、一个元素有多个子元素，子元素可能是动态添加的。
+2、为多个不同操作统一委托（即订阅发布机制）
+动态添加那种只能考虑用委托，而其他方面主要是为性能。
+                 </pre>
+              </div>
+            </dd>
+        </dl><dl class="am-accordion-item">
+            <dt class="am-accordion-title">
+                  41.AMD和CMD是什么？它们的区别有哪些？
+            </dt>
+            <dd class="am-accordion-bd am-collapse ">
+              <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+              <div class="am-accordion-content">
+                 <pre>
+AMD和CMD是二种模块定义规范。现在都使用模块化编程，
+AMD，异步模块定义；CMD，通用模块定义。
+AMD依赖前置，CMD依赖就近。
+CMD的API职责单一，没有全局require，AMD的一个API可以多用。
+                 </pre>
+              </div>
+            </dd>
+        </dl>
+        <dl class="am-accordion-item">
+            <dt class="am-accordion-title">
+                  37.
+            </dt>
+            <dd class="am-accordion-bd am-collapse ">
+              <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+              <div class="am-accordion-content">
+                 <pre>
+ 
+                 </pre>
+              </div>
+            </dd>
+        </dl>
+        
+
+
+</div>
+</dd>
+        <dl class="am-accordion-item">
+            <dt class="am-accordion-title">
+                  其他框架和库
+            </dt>
+            <dd class="am-accordion-bd am-collapse ">
+              <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+              <div class="am-accordion-content">
+                  <dl class="am-accordion-item">
+          <dt class="am-accordion-title">
+            <img src="images/vue.png" width="20" height="20">Vue
+          </dt>
+          <dd class="am-accordion-bd am-collapse ">
+            <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+            <div class="am-accordion-content">
+                <dl class="am-accordion-item">
+                  <dt class="am-accordion-title">
+                    0.前端框架Vue优点和缺点
+                  </dt>
+                  <dd class="am-accordion-bd am-collapse ">
+                    <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+                    <div class="am-accordion-content">
+                     <pre>
+
+ 特性：1.轻量级的框架2.双向数据绑定3.指令4.插件化
+ 优点：
+    1. 简单：官方文档很清晰，比 Angular 简单易学。
+    2. 快速：异步批处理方式更新 DOM。
+    3. 组合：用解耦的、可复用的组件组合你的应用程序。
+    4. 紧凑：~18kb min+gzip，且无依赖。
+    5. 强大：表达式 & 无需声明依赖的可推导属性 (computed properties)。
+    6. 对模块友好：可以通过 NPM、Bower 或 Duo 安装，不强迫你所有的代码都遵循 Angular 的各种规定，使用场景更加灵活。
+
+缺点：
+    1. 新生儿：Vue.js是一个新的项目，没有angular那么成熟。
+    2. 影响度不是很大：google了一下，有关于Vue.js多样性或者说丰富性少于其他一些有名的库。
+    3. 不支持IE8：
+                     </pre>
+                    </div>
+                  </dd>
+                </dl>
+
+                <dl class="am-accordion-item">
+                  <dt class="am-accordion-title">
+                    1.生命周期
+                  </dt>
+                  <dd class="am-accordion-bd am-collapse ">
+                    <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+                    <div class="am-accordion-content">
+                      Vue实例有一个完整的生命周期，也就是从开始创建、初始化数据、编译模板、挂载Dom、渲染→更新→渲染、卸载等一系列过程，我们称这是Vue的生命周期。通俗说就是Vue实例从创建到销毁的过程，就是生命周期。
+                    </div>
+                  </dd>
+                </dl>
+                <dl class="am-accordion-item">
+                    <dt class="am-accordion-title">
+                        2.每个钩子函数都在啥时间触发
+                    </dt>
+                    <dd class="am-accordion-bd am-collapse ">
+                      <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+                      <div class="am-accordion-content">
+                           <dl class="am-accordion-item">
+                              <dt class="am-accordion-title">
+                                  1.beforeCreate
+                              </dt>
+                              <dd class="am-accordion-bd am-collapse ">
+                                <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+                                <div class="am-accordion-content">
+                                    在实例初始化之后，数据观测(data observer) 和 event/watcher 事件配置之前被调用。<br>
+                                    可以在这加个loading事件
+                                </div>
+                              </dd>
+                          </dl>
+                           <dl class="am-accordion-item">
+                              <dt class="am-accordion-title">
+                                  2.created
+                              </dt>
+                              <dd class="am-accordion-bd am-collapse ">
+                                <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+                                <div class="am-accordion-content">
+                                    实例已经创建完成之后被调用。在这一步，实例已完成以下的配置：数据观测(data observer)，属性和方法的运算， watch/event 事件回调。然而，挂载阶段还没开始，$el 属性目前不可见。<br>
+                                    在这结束loading，还做一些初始化，实现函数自执行 
+                                </div>
+                              </dd>
+                          </dl>
+                           <dl class="am-accordion-item">
+                              <dt class="am-accordion-title">
+                                  3.beforeMount
+                              </dt>
+                              <dd class="am-accordion-bd am-collapse ">
+                                <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+                                <div class="am-accordion-content">
+                                    在挂载开始之前被调用：相关的 render 函数首次被调用。
+                                </div>
+                              </dd>
+                          </dl>
+                          <dl class="am-accordion-item">
+                              <dt class="am-accordion-title">
+                                  4.mounted
+                              </dt>
+                              <dd class="am-accordion-bd am-collapse ">
+                                <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+                                <div class="am-accordion-content">
+                                    el 被新创建的 vm.$el 替换，并挂载到实例上去之后调用该钩子。<br>
+                                    在这发起后端请求，拿回数据，配合路由钩子做一些事情
+                                </div>
+                              </dd>
+                          </dl>
+                          <dl class="am-accordion-item">
+                              <dt class="am-accordion-title">
+                                  5.beforeUpdate
+                              </dt>
+                              <dd class="am-accordion-bd am-collapse ">
+                                <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+                                <div class="am-accordion-content">
+                                    数据更新时调用，发生在虚拟 DOM 重新渲染和打补丁之前。 你可以在这个钩子中进一步地更改状态，这不会触发附加的重渲染过程。
+                                </div>
+                              </dd>
+                          </dl>
+                           <dl class="am-accordion-item">
+                              <dt class="am-accordion-title">
+                                 6.updated
+                              </dt>
+                              <dd class="am-accordion-bd am-collapse ">
+                                <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+                                <div class="am-accordion-content">
+                                    由于数据更改导致的虚拟 DOM 重新渲染和打补丁，在这之后会调用该钩子。
+                                    当这个钩子被调用时，组件 DOM 已经更新，所以你现在可以执行依赖于 DOM 的操作。然而在大多数情况下，你应该避免在此期间更改状态，因为这可能会导致更新无限循环。
+
+该钩子在服务器端渲染期间不被调用。
+                                </div>
+                              </dd>
+                          </dl>
+                          <dl class="am-accordion-item">
+                              <dt class="am-accordion-title">
+                                 7.beforeDestroy
+                              </dt>
+                              <dd class="am-accordion-bd am-collapse ">
+                                <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+                                <div class="am-accordion-content">
+                                    实例销毁之前调用。在这一步，实例仍然完全可用。<br>
+                                    你确认删除XX吗？ destoryed ：当前组件已被删除，清空相关内容
+                                </div>
+                              </dd>
+                          </dl>
+                           <dl class="am-accordion-item">
+                              <dt class="am-accordion-title">
+                                 8.destroyed
+                              </dt>
+                              <dd class="am-accordion-bd am-collapse ">
+                                <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+                                <div class="am-accordion-content">
+                                    Vue 实例销毁后调用。调用后，Vue 实例指示的所有东西都会解绑定，所有的事件监听器会被移除，所有的子实例也会被销毁。 该钩子在服务器端渲染期间不被调用。
+                                </div>
+                              </dd>
+                          </dl>
+                      </div>
+                    </dd>
+                </dl>
+
+                <dl class="am-accordion-item">
+                  <dt class="am-accordion-title">
+                    实例和内置组件
+                  </dt>
+                  <dd class="am-accordion-bd am-collapse ">
+                    <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+                    <div class="am-accordion-content">
+<pre>
+1.构造器里的add方法
+  methods:{
+    add:function(){
+        console.log("调用了Add方法");
+    }
+  }
+  实例调用：
+  vm.add();
+
+2.$mount方法
+  $mount方法是用来挂载我们的扩展的
+  var mediumwave = Vue.extend({
+            template:`&lt;p>{{message}}&lt;/p>`,
+            data:function(){
+                return {
+                    message:'Hello ,I am JSPang'
+                }
+            }
+        })
+  var vm = new mediumwave().$mount("#app")
+3.$destroy
+  $destroy()方法进行卸载。
+  &lt;p>&lt;button onclick="destroy()">卸载&lt;/button>&lt;/p>
+  function destroy(){
+    vm.$destroy();
+  }
+4.$forceUpdate() 更新方法
+5.$nextTick() 数据修改方法
+  当Vue构造器里的data值被修改完成后会调用这个方法，也相当于一个钩子函数吧，和构造器里的updated生命周期很像
+  function tick(){
+    vm.message="update message info ";
+    vm.$nextTick(function(){
+        console.log('message更新完后我被调用了');
+    })
+  }
+
+6.实例事件
+  构造器外部写一个调用构造器内部的方法
+  好处:可以通过这种写法在构造器外部调用构造器内部的数据
+  (1).$on在构造器外部添加事件。
+      $on接收两个参数，(调用时的事件名称,一个匿名方法)
+      vm.$on('reduce',function(){
+          console.log('执行了reduce()');
+          this.num--;
+      });
+
+      如果按钮在作用域外部，可以利用$emit来执行。
+      //外部调用内部事件
+      function reduce(){
+          app.$emit('reduce');
+      }
+  (2).$once执行一次的事件
+      vm.$once('reduceOnce',function(){
+          console.log('只执行一次的方法');
+          this.num--;
+      });
+  (3).$off关闭事件
+      //关闭事件
+      function off(){
+         app.$off('reduce');
+      }
+7.内置组件 -slot讲解
+  slot是标签的内容扩展，也就是说你用slot就可以在自定义组件时传递给组件内容，组件接收内容并输出。
+  先来定义一个&lt;mediumwave>&lt;/mediumwave>的组件，这个组件用来显示博主的一些信息。
+  我们在Vue 构造器里的data中给出了信息，信息如下：（博客地址，网名，使用技能）
+  data:{
+    mediumwaveData:{
+        bolgUrl:'http://jspang.com',
+        netName:'技术胖',
+        skill:'Web前端'
+    }
+  },
+
+  我们用&lt;template>&lt;/template>标签的方式定义了组件：
+  &lt;template id="tmp">
+    &lt;div>
+        &lt;p>博客地址：&lt;/p>
+        &lt;p>网名：&lt;/p>
+        &lt;p>技术类型：&lt;/p>
+    &lt;/div>
+  &lt;/template>
+
+  我们现在就可以用slot功能让组件接收传递过来的值，并在模板中接收显示。
+  slot的使用需要两步：
+    1、在HTML的组件中用slot属性传递值。
+        &lt;mediumwave>
+          &lt;span slot="bolgUrl">{{mediumwaveData.bolgUrl}}&lt;/span>
+          &lt;span slot="netName">{{mediumwaveData.netName}}&lt;/span>
+          &lt;span slot="skill">{{mediumwaveData.skill}}&lt;/span>
+        &lt;/mediumwave>
+
+    2、在组件模板中用&lt;slot>&lt;/slot>标签接收值。
+      &lt;template id="tmp">
+          &lt;div>
+              &lt;p>博客地址：&lt;slot name="bolgUrl">&lt;/slot>&lt;/p>
+              &lt;p>网名：&lt;slot name="netName">&lt;/slot>&lt;/p>
+              &lt;p>技术类型：&lt;slot name="skill">&lt;/slot>&lt;/p>
+          &lt;/div>
+      &lt;/template>
+</pre>
+                    </div>
+                  </dd>
+                </dl>
+
+                 <dl class="am-accordion-item">
+                  <dt class="am-accordion-title">
+                      vuex
+                  </dt>
+                  <dd class="am-accordion-bd am-collapse ">
+                    <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+                    <div class="am-accordion-content">
+                        <dl class="am-accordion-item">
+                          <dt class="am-accordion-title">
+                              实现数据的共享
+                          </dt>
+                          <dd class="am-accordion-bd am-collapse ">
+                            <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+                            <div class="am-accordion-content">
+<pre>
+1.现在我们store.js文件里增加一个常量对象。store.js文件就是我们在引入vuex时的那个文件。
+  const state={
+      count:1
+  }
+2.用export default 封装代码，让外部可以引用。
+  export default new Vuex.Store({
+    state
+  })
+3.新建一个vue的模板，位置在components文件夹下，名字叫count.vue。在模板中我们引入我们刚建的store.js文件，
+  并在模板中用{{$store.state.count}}输出count 的值。
+&lt;template>
+    &lt;div>
+        &lt;h2>{{msg}}&lt;/h2>
+        &lt;hr/>
+        &lt;h3>{{$store.state.count}}&lt;/h3>
+    &lt;/div>
+&lt;/template>
+&lt;script>
+    import store from '@/vuex/store'
+    export default{
+        data(){
+            return{
+                msg:'Hello Vuex',
+
+            }
+        },
+        store
+    }
+&lt;/script>
+4.在store.js文件中加入两个改变state的方法。
+  const mutations={
+      add(state){
+          state.count++;
+      },
+      reduce(state){
+          state.count--;
+      }
+  }
+  这里的mutations是固定的写法，意思是改变的，我们到时候会用一节课专门讲这个mutations，所以你先不用着急，
+  只知道我们要改变state的数值的方法，必须写在mutations里就可以了。
+5.在count.vue模板中加入两个按钮，并调用mutations中的方法。
+&lt;div>
+    &lt;button @click="$store.commit('add')">+&lt;/button>
+    &lt;button @click="$store.commit('reduce')">-&lt;/button>
+&lt;/div>
+这样进行预览就可以实现对vuex中的count进行加减了。
+</pre>
+                            </div>
+                          </dd>
+                        </dl>
+  
+
+                    </div>
+
+
+                  </dd>
+                </dl>
+
+
+                 <dl class="am-accordion-item">
+                  <dt class="am-accordion-title">
+                    <img src="images/react.png" width="20" height="20">React
+                  </dt>
+                  <dd class="am-accordion-bd am-collapse ">
+                    <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+                    <div class="am-accordion-content">
+                      React.js
+                    </div>
+                  </dd>
+                </dl>
+
+            </div>
+          </dd>
+      </dl>
+
+
+      <dl class="am-accordion-item">
+          <dt class="am-accordion-title">
+            <img src="images/angular.png" width="20" height="20">Angular
+          </dt>
+          <dd class="am-accordion-bd am-collapse ">
+            <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+            <div class="am-accordion-content">
+<pre>
+特性:
+  1.良好的应用程序结构
+  2.双向数据绑定
+  3.指令
+  4.HTML模板
+  5.可嵌入、注入和测试
+
+优点：
+  1. 模板功能强大丰富，自带了极其丰富的angular指令。
+  2. 是一个比较完善的前端框架，包含服务，模板，数据双向绑定，模块化，路由，过滤器，依赖注入等所有功能；
+  3. 自定义指令，自定义指令后可以在项目中多次使用。
+  4. ng模块化比较大胆的引入了Java的一些东西（依赖注入），能够很容易的写出可复用的代码，对于敏捷开发的团队来说非常有帮助。
+  5. angularjs是互联网巨人谷歌开发，这也意味着他有一个坚实的基础和社区支持。
+
+缺点：
+  1. angular 入门很容易 但深入后概念很多, 学习中较难理解.
+  2. 文档例子非常少, 官方的文档基本只写了api, 一个例子都没有, 很多时候具体怎么用都是google来的, 或直接问misko,angular的作者.
+  3. 对IE6/7 兼容不算特别好, 就是可以用jQuery自己手写代码解决一些.
+  4. 指令的应用的最佳实践教程少, angular其实很灵活, 如果不看一些作者的使用原则,
+     很容易写出四不像的代码, 例如js中还是像jQuery的思想有很多dom操作.
+  5. DI 依赖注入 如果代码压缩需要显示声明.
+</pre>
+
+           1.不要在同一行声明多个变量。<br>
+           2.请使用 ===/!==来比较true/false或者数值<br>
+           3.使用对象字面量替代new Array这种形式<br>
+           4.不要使用全局函数。<br>
+           5.Switch语句必须带有default分支<br>
+           6.函数不应该有时候有返回值，有时候没有返回值。<br>
+           7.For循环必须使用大括号<br>
+           8.If语句必须使用大括号<br>
+           9.for-in循环中的变量 应该使用var关键字明确限定作用域，从而避免作用域污染
+            </div>
+          </dd>
+      </dl>
+
+      <dl class="am-accordion-item">
+          <dt class="am-accordion-title">
+            <span style="display: inline-block;width: 20px;height: 20px;background:#6f5499 ;border-radius: 5px;text-align: center;line-height: 20px;color:white;">B</span>Bootstrap
+          </dt>
+          <dd class="am-accordion-bd am-collapse ">
+            <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+            <div class="am-accordion-content">
+                 [1, NaN, NaN] 因为 parseInt 需要两个参数 (val, radix)，其中 radix 表示解析时用的基数。map 传了 3 个 (element, index, array)，对应的 radix 不合法导致解析失败。
+            </div>
+          </dd>
+      </dl>
+
+      <dl class="am-accordion-item">
+                  <dt class="am-accordion-title">
+                    jQuery
+                  </dt>
+                  <dd class="am-accordion-bd am-collapse ">
+                    <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+                    <div class="am-accordion-content">
+                      <pre>
+JQuery的特点:
+  轻量级 丰富的DOM选择器 链式表达式 事件、样式、动画支持  Ajax操作支持  跨浏览器兼容  插件扩展开发  可扩展性强
+
+JQuery的优点：
+(1)JQuery实现脚本与页面的分离
+(2).最少的代码做最多的事情
+(3)性能支持比较好
+(4)它是一个“标准” 
+(5)  插件发开 
+(6) 节约学习成本 
+(7) 让JS编程变得有趣 
+
+JQuery的缺点:
+不能向后兼容  插件兼容性 多个插件冲突  jQuery的稳定性  对动画和特效的支持差。
+
+                      </pre>
+                    </div>
+                  </dd>
+              </dl>
+
+              <dl class="am-accordion-item">
+                  <dt class="am-accordion-title">
+                    <img src="images/react.png" width="20" height="20">React
+                  </dt>
+                  <dd class="am-accordion-bd am-collapse ">
+                    <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+                    <div class="am-accordion-content">
+<pre>
+React主要用于构建UI。你可以在React里传递多种类型的参数，如声明代码，
+帮助你渲染出UI、也可以是静态的HTML DOM元素、也可以传递动态变量、甚至是可交互的应用组件。
+
+特性：　
+  1.声明式设计：React采用声明范式，可以轻松描述应用。
+  2.高效：React通过对DOM的模拟，最大限度地减少与DOM的交互。
+  3.灵活：React可以与已知的库或框架很好地配合。
+
+优点：
+  1. 速度快：在UI渲染过程中，React通过在虚拟DOM中的微操作来实现对实际DOM的局部更新。
+  2. 跨浏览器兼容：虚拟DOM帮助我们解决了跨浏览器问题，它为我们提供了标准化的API，甚至在IE8中都是没问题的。
+  3. 模块化：为你程序编写独立的模块化UI组件，这样当某个或某些组件出现问题是，可以方便地进行隔离。
+  4. 单向数据流：Flux是一个用于在JavaScript应用中创建单向数据层的架构，它随着React视图库的开发而被Facebook概念化。
+  5. 同构、纯粹的javascript:因为搜索引擎的爬虫程序依赖的是服务端响应而不是JavaScript的执行,
+    预渲染你的应用有助于搜索引擎优化。
+  6. 兼容性好：比如使用RequireJS来加载和打包，而Browserify和Webpack适用于构建大型应用。
+    它们使得那些艰难的任务不再让人望而生畏。
+
+缺点：
+  1. React本身只是一个V而已，并不是一个完整的框架，所以如果是大型项目想要一套完整的框架的话，基本都需要加上ReactRouter和Flux才能写大型应用。
+</pre>
+                    </div>
+                  </dd>
+              </dl>
+              </div>
+            </dd>
+        </dl>
+
+        <dl class="am-accordion-item">
+          <dt class="am-accordion-title">
+            JavaScript插件
+          </dt>
+          <dd class="am-accordion-bd am-collapse ">
+            <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+            <div class="am-accordion-content">
+<pre>
+1.表单验证 validate.js
+2.表格     dateTables.js
+3.弹层     layer.js
+4.分页     layPage.js
+5.下拉框选择   chosen.js
+6.图片全屏显示    supersized.js
+7.复选框单选按钮美化 iCheck.js
+8.全屏滚动    fullPage.js
+9.上传    zyUpload.js
+10.树     zTree.js
+11.表单提交   ajaxForm.js
+12.输入格式化  inputmask.js/maskedinput.js
+13.向导   formToWizard.js
+14.日历   fullcalendar.js
+15.手机端滚动    iscroll.js
+</pre>
+            </div>
+          </dd>
+       </dl>
+</dd>
+  </section>
+
+  <section data-am-widget="accordion" class="am-accordion am-accordion-gapped" data-am-accordion='{  }'>
+    <h2  class="am-accordion-title">前端自动化构建工具</h2><dd class="am-accordion-bd am-collapse ">
+    <dl class="am-accordion-item">
+          <dt class="am-accordion-title">
+             grunt、gulp、webpack
+        百度有FIS
+        腾讯有Modjs
+        360有燕尾服
+        还有很多团队在使用Ant
+        Shell等。
+          </dt>
+          <dd class="am-accordion-bd am-collapse ">
+            <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+            <div class="am-accordion-content">
+              Webpack 本身只能处理 JavaScript 模块,如果要处理其他类型的文件，就需要使用 loader 进行转换.
+添加 CSS  使用到 css-loader 和 style-loader
+css-loader 会遍历 CSS 文件，然后找到 url() 表达式然后处理他们，
+style-loader 会把原来的 CSS 代码插入页面中的一个 style 标签中。
+
+webpack-dev-server 开发服务
+npm install webpack-dev-server
+# 运行  webpack-dev-server --progress --colors
+
+
+webpack项目
+1.初始化项目
+  npm init //创建package.josn文件
+  npm install webpack --save-dev//安装依赖包
+2.安装loader，stylus以及postCss
+  npm install style-loader css-loader stylus-loader stylus --save-dev
+  npm install --save-dev postcss-loader autoprefixer
+3.目录结构大致如下
+4.添加webpack.config.js 配置如下：
+5.通过webpack-dev-server实现页面的自动刷新。
+  npm install --save-dev webpack-dev-server
+
+
+
+--save-dev 安装的插件，被写入到 devDependencies 对象里面去  开发环境
+--save     安装的插件，则被写入到 dependencies 对象里面去   生产环境
+
+
+express+webpack+react搭建项目
+1.express xxxx
+2.npm install react --save-dev
+3.npm install react-dom --save-dev
+webpack的安装和配置
+1.npm install webpack --save-dev
+2.安装各种loader：
+webpack需要的loader有：html-loader、css-loader、style-loader、url-loader、jsx-loader、babel-loader等，安装方式npm install ***** --save-dev，在安装这些loader之前，需要先安装file-loader，在安装babel-loader之前，需要先安装babel-core。
+npm install babel-core file-loader babel-loader html-loader css-loader style-loader url-loader jsx-loader --save-dev
+
+
+            </div>
+          </dd>
+       </dl>
+   </dd>
+  </section>
+
+
+  <section data-am-widget="accordion" class="am-accordion am-accordion-gapped" data-am-accordion='{  }'>
+    <h2  class="am-accordion-title">性能优化</h2><dd class="am-accordion-bd am-collapse ">
+    <dl class="am-accordion-item">
+          <dt class="am-accordion-title">
+            1.服务器：
+          </dt>
+          <dd class="am-accordion-bd am-collapse ">
+            <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+            <div class="am-accordion-content">
+<pre>
+1.使用cdn
+2.添加Expires或Cache-Control报文头
+3.Gzip压缩传输文件(相对于PHP)
+  php目录下的php.ini文件，找到zlib.output_compression = Off，改成zlib.output_compression = On，
+  再把;zlib.output_compression_level前面的;去掉，后面的-1改成1~5的数值。
+  这样便可以实现所有php页面的gzip效果，不再需要单独修改网站的php文件——如果站点很多的话，会节省很多时间。
+4.配置ETags
+5.尽早flush输出
+6.使用GET Ajax请求
+7.避免空的图片src
+</pre>
+              
+            </div>
+          </dd>
+       </dl>
+       <dl class="am-accordion-item">
+          <dt class="am-accordion-title">
+            2.网页内容：
+          </dt>
+          <dd class="am-accordion-bd am-collapse ">
+            <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+            <div class="am-accordion-content">
+<pre>
+1.减少http请求次数=>80%响应时间在下载网页内容(捆绑文件,css sprites,)
+2.减少DNS查询次数
+3.避免页面跳转
+4.缓存Ajax
+5.延迟加载
+6.提前加载
+7.减少dom元素数量
+8.根据域名划分内容
+9.减少iframe数量
+10.避免404
+</pre>
+            </div>
+          </dd>
+       </dl>
+
+       <dl class="am-accordion-item">
+          <dt class="am-accordion-title">
+            3.移动端性能优化
+          </dt>
+          <dd class="am-accordion-bd am-collapse ">
+            <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+            <div class="am-accordion-content">
+ <pre>
+- 尽量使用css3动画，开启硬件加速。
+- 适当使用`touch`事件代替`click`事件。
+- 避免使用`css3`渐变阴影效果。
+- 可以用`transform: translateZ(0)`来开启硬件加速。
+- 不滥用Float。Float在渲染时计算量比较大，尽量减少使用
+- 不滥用Web字体。Web字体需要下载，解析，重绘当前页面，尽量减少使用。
+- 合理使用requestAnimationFrame动画代替setTimeout
+- CSS中的属性（CSS3 transitions、CSS3 3D transforms、Opacity、Canvas、WebGL、Video）会触发GPU渲染，请合理使用。过渡使用会引发手机过耗电增加
+- PC端的在移动端同样适用
+ </pre>
+            </div>
+          </dd>
+       </dl>
+       <dl class="am-accordion-item">
+          <dt class="am-accordion-title">
+            对重构的理解
+          </dt>
+          <dd class="am-accordion-bd am-collapse ">
+            <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+            <div class="am-accordion-content">
+ <pre>
+网站重构:在不改变外部行为的前提下，简化结构、添加可读性，而在网站前端保持一致的行为。
+        也就是说是在不改变UI的情况下，对网站进行优化，在扩展的同时保持一致的UI。
+
+    对于传统的网站来说重构通常是：
+    表格(table)布局改为DIV+CSS
+    使网站前端兼容于现代浏览器(针对于不合规范的CSS、如对IE6有效的)
+    对于移动平台的优化
+    针对于SEO进行优化
+    深层次的网站重构应该考虑的方面
+    减少代码间的耦合
+    让代码保持弹性
+    严格按规范编写代码
+    设计可扩展的API
+    代替旧有的框架、语言(如VB)
+    增强用户体验
+    通常来说对于速度的优化也包含在重构中
+    压缩JS、CSS、image等前端资源(通常是由服务器来解决)
+    程序的性能优化(如数据读写)
+    采用CDN来加速资源加载
+    对于JS DOM的优化
+    HTTP服务器的文件缓存
+
+
+网站重构到底是什么
+网站重构不是一种技术，不是css+div，更不是标准，网站重构是一种思想，是一种理念。
+
+网站重构是为了希望自己的网站成本变得更低，运行得更好，访问者更多的网页设计师、开发者、网站所有者及管理者写的。
+原理:
+把"未采用CSS，大量使用HTML进行定位、布局，或者虽然已经采用CSS，但是未遵循HTML结构化标准的站点"变成"让标记回归标记的原本意义。通过在HTML文档中使用结构化的标记以及用CSS控制页面表现，使页面的实际内容与它们呈现的格式相分离的站点。"的过程就是网站重构(Website Reconstruction)
+ </pre>
+            </div>
+          </dd>
+       </dl>
+   </dd>
+  </section>
+  <section data-am-widget="accordion" class="am-accordion am-accordion-gapped" data-am-accordion='{  }'>
+    <h2  class="am-accordion-title">web安全及防护原理</h2><dd class="am-accordion-bd am-collapse ">
+    <dl class="am-accordion-item">
+          <dt class="am-accordion-title">
+            1.sql注入原理：
+          </dt>
+          <dd class="am-accordion-bd am-collapse ">
+            <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+            <div class="am-accordion-content">
+<pre>
+<!-- 就是通过把SQL命令插入到Web表单递交或输入域名或页面请求的查询字符串，最终达到欺骗服务器执行恶意的SQL命令。 -->
+用户可以提交一段数据库查询代码，根据程序返回的结果，获得某些他想得知的数据，这就是所谓的SQL Injection，即SQL注入。
+
+总的来说有以下几点：
+1.永远不要信任用户的输入，要对用户的输入进行校验，可以通过正则表达式，或限制长度，对单引号和双"-"进行转换等。
+2.永远不要使用动态拼装SQL，可以使用参数化的SQL或者直接使用存储过程进行数据查询存取。
+3.永远不要使用管理员权限的数据库连接，为每个应用使用单独的权限有限的数据库连接。
+4.不要把机密信息明文存放，请加密或者hash掉密码和敏感的信息。
+</pre>
+            </div>
+          </dd>
+       </dl>
+
+       <dl class="am-accordion-item">
+          <dt class="am-accordion-title">
+            2.XSS原理及防范
+          </dt>
+          <dd class="am-accordion-bd am-collapse ">
+            <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+            <div class="am-accordion-content">
+<pre>
+（跨站脚本攻击）
+Xss(cross-site scripting)
+其原理是攻击者向有XSS漏洞的网站中输入(传入)恶意的HTML代码，当其它用户浏览该网站时，这段HTML代码会自动执行，从而达到攻击的目的。如，盗取用户Cookie、破坏页面结构、重定向到其它网站等。
+
+
+XSS防范方法
+
+首先代码里对用户输入的地方和变量都需要仔细检查长度和对`”<”,”>”,”;”,”’”`等字符做过滤；其次任何内容写到页面之前都必须加以`encode`，避免不小心把`html tag` 弄出来。这一个层面做好，至少可以堵住超过一半的`XSS` 攻击。
+
+首先，避免直接在cookie 中泄露用户隐私，例如email、密码等等。
+其次，通过使cookie 和系统ip 绑定来降低cookie 泄露后的危险。这样攻击者得到的cookie 没有实际价值，不可能拿来重放。
+
+如果网站不需要再浏览器端对cookie 进行操作，可以在Set-Cookie 末尾加上HttpOnly 来防止javascript 代码直接获取cookie。
+
+尽量采用`POST` 而非`GET` 提交表单
+</pre>
+            </div>
+          </dd>
+       </dl>
+
+       <dl class="am-accordion-item">
+          <dt class="am-accordion-title">
+            3.XSS与CSRF有什么区别
+          </dt>
+          <dd class="am-accordion-bd am-collapse ">
+            <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+            <div class="am-accordion-content">
+<pre>
+XSS是获取信息，不需要提前知道其他用户页面的代码和数据包。
+CSRF是代替用户完成指定的动作，需要知道其他用户页面的代码和数据包。
+
+要完成一次`CSRF`攻击，受害者必须依次完成两个步骤：
+  登录受信任网站A，并在本地生成Cookie。
+  在不登出A的情况下，访问危险网站B。
+>CSRF的防御
+- 服务端的`CSRF`方式方法很多样，但总的思想都是一致的，就是在客户端页面增加伪随机数。
+- 通过验证码的方法
+</pre>
+            </div>
+          </dd>
+       </dl>
+   </dd>
+  </section>
+  <section data-am-widget="accordion" class="am-accordion am-accordion-gapped" data-am-accordion='{  }'>
+    <h2  class="am-accordion-title">其他</h2><dd class="am-accordion-bd am-collapse ">
+    <dl class="am-accordion-item">
+          <dt class="am-accordion-title">
+            1.介绍
+          </dt>
+          <dd class="am-accordion-bd am-collapse ">
+            <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+            <div class="am-accordion-content">
+              <pre>
+1.自我介绍：除了基本个人信息以外，面试官更想听的是你与众不同的地方和你的优势。
+2.项目介绍
+3.如何看待前端开发？
+4.平时是如何学习前端开发的？
+5.未来三到五年的规划是怎样的？
+
+你觉得前端工程的价值体现在哪
+为简化用户使用提供技术支持（交互部分）
+为多个浏览器兼容性提供支持
+为提高用户浏览速度（浏览器性能）提供支持
+为跨平台或者其他基于webkit或其他渲染引擎的应用提供支持
+为展示数据提供支持（数据接口）
+              </pre>
+
+            </div>
+          </dd>
+       </dl>
+   </dd>
+  </section>
+<script>
+  //sessionStorage.setItem("key", "value");   localStorage.setItem("site", "js8.in");
+  //var value = sessionStorage.getItem("key");  var site = localStorage.getItem("site");
+  $(window).scroll(function(){
+    if($(document).scrollTop()!=0){
+      localStorage .setItem("offsetTop", $(window).scrollTop());//保存滚动位置
+    }
+  });
+
+  //onload时，取出并滚动到上次保存位置
+  window.onload = function(){
+    　var _offset = localStorage .getItem("offsetTop");
+    　$(document).scrollTop(_offset);
+  };
+
+  //1.内联元素，垂直margin无效
+            //2.margin重叠 父元素和兄弟元素是否重叠
+            //3.display:table-cell  不分行内还是块级元素 margin无效 替换元素除外
+            //4.position:absolut
+            //5.鞭长莫及
+            //6.内联特性导致margin失效
+
+            //margin的值是百分比，则是相对于父元素的宽度来计算的
+            //行内非替换元素上下margin无效
+
+            //BFC块级格式上下文，一种布局方式
+
+            //1.D3046 17:53-23:18 上海-汉口 Z95 04:49-11:12 汉口-万州 353
+            //2
+</script>
+</body>
+</html>
