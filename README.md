@@ -1,12 +1,5 @@
-<<<<<<< HEAD
-2018年1月23日
-水平垂直翻转
-2018年1月22日
-整理web前端面试
-=======
 # 2018
  2018年1月23日
-## 水平垂直翻转
+## [水平垂直翻转 ](web/flip_horizintal_vertical.html)
  2018年1月22日
 ## [整理web前端面试](https://mediumwave120.github.io/2018/webFrontInterview/)
->>>>>>> 3af5104817d0c2801abd4604e8965178007b361d
