@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<head>
+   <title>Js实现逐字在网页上打印文字</title>
+   <meta charset="utf-8">
+   <style>
+      .result{
+          margin: 100px auto;
+          font-size: 30px;
+          color:grey;
+          text-align: center;
+      }
+      .resultType{
+         font-size: 30px;
+          color:#b47777;
+          text-align: center;
+      }
+      p{
+        margin: 100px auto;
+        text-align: center;
+        color:red;
+      }
+   </style>
+   
+
+</head>
+
+<body>
+<div class="result"></div>
+<div class="resultType"></div>
+<p>支持IE8+、Google、Firefox、Opera、Safari</p>
+<script language="javascript">
+    window.onload=function(){
+        var result=document.querySelector('.result');
+        var resultType=document.querySelector(".resultType");
+        var t='我就是我,不一样的烟火！'
+            result.innerHTML=t;
+        function AddZero(n){
+          if(n<10){
+            return '0'+n;
+          }
+          return ''+n;
+        }
+        var i=1;
+        function type(){
+          var str  = t.substr(0,i);
+          resultType.innerHTML = str + "_";
+          i++;
+            if (i>t.length){
+               i=0;
+               return ;
+              //return 加入则text显示完后，停止
+                str=i;
+            }
+          var t1=setTimeout(type,100);
+        }
+        type();
+    }
+  
+</script>
+</body>
+</html>
