@@ -17,8 +17,5 @@ function AddZero(n){
 		return '0'+n;
 	}
 	return ''+n;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> d721f35f43cebb6fbbcdc55a6da027c5eef3a059
+
