@@ -1,101 +1,104 @@
+body{
+background:#ece8e8;
+}
 /*总容器*/
-	#container{
-	margin:50px auto;
-	width: 700px;
-	height: 400px;
-	/*background: red;*/
-	}
-	/*视频部分*/
-	.content{
+#container{
+margin:50px auto;
+width: 700px;
+height: 400px;
+/*background: red;*/
+}
+/*视频部分*/
+.content{
 
-	}
-	#video1{
-		object-fit:fill;
-	}
-	/*进度条*/
-	.progress{
-		width: 700px;
-		position: relative;
-		top: -7px;
-		height: 20px;
-		background: #828282;
-	}
-	.progress .pro_bg{
-		width: 20px;
-		height: 20px;
-		background:#5aa700;
-		border-radius: 10px;
-	}
-	.progress .bar{
-		width: 20px;
-		height: 20px;
-		border-radius: 10px;
-		background:#fff;
-		position: absolute;
-		top:0px;
-		left: 0px;
-	}
-	.progress:hover{
-		cursor: pointer;
-	}
-	/*控制器*/
-	.controls{
-		width: 680px;
-		position: absolute;
-		height: 44px;
-		background: #302f29;
-		margin-top: -7px;
-		line-height: 44px;
-		padding-left: 20px;
-	}
-	.controls .iconfont{
-		font-size: 30px;
-		color:#ababab;
-	}
-	.icon-bofangqi-xiayiji{
-		margin-left: 8px;
-	}
-	.iconfont:hover{
-		cursor: pointer;
-	}
-	.controls .currTime{
-		font-size: 16px;
-		margin-left: 20px;
-		display: inline-block;
-		color: #fff;
-		position: absolute;
-		left: 92px;
-	}
-	.controls .xx{
-		font-size: 16px;
-		display: inline-block;
-		color: #ababab;
-		position: absolute;
-		left: 159px;
-		padding-bottom: 10px;
-		width: 80px;
-	}
-	.controls .allTime{
-		font-size: 16px;
-		display: inline-block;
-		color:#ababab;
-		position: absolute;
-		left: 168px;
-	}
-	.controls .icon-shengyin{
-		position: absolute;
-		left: 600px;
-	}
-	.controls .icon-quanping{
-		position: absolute;
-		left: 650px;
-	}
-	.icon-jingyin{
-		position: absolute;
-		left: 600px;
-	}
-	p.browser{
-		text-align: center;
-	    color: red;
-	    margin-top: 100px;
-	}
+}
+#video1{
+	object-fit:fill;
+}
+/*进度条*/
+.progress{
+	width: 700px;
+	position: relative;
+	top: -7px;
+	height: 20px;
+	background: #828282;
+}
+.progress .pro_bg{
+	width: 20px;
+	height: 20px;
+	background:#5aa700;
+	border-radius: 10px;
+}
+.progress .bar{
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	background:#fff;
+	position: absolute;
+	top:0px;
+	left: 0px;
+}
+.progress:hover{
+	cursor: pointer;
+}
+/*控制器*/
+.controls{
+	width: 680px;
+	position: absolute;
+	height: 44px;
+	background: #302f29;
+	margin-top: -7px;
+	line-height: 44px;
+	padding-left: 20px;
+}
+.controls .iconfont{
+	font-size: 30px;
+	color:#ababab;
+}
+.icon-bofangqi-xiayiji{
+	margin-left: 8px;
+}
+.iconfont:hover{
+	cursor: pointer;
+}
+.controls .currTime{
+	font-size: 16px;
+	margin-left: 20px;
+	display: inline-block;
+	color: #fff;
+	position: absolute;
+	left: 92px;
+}
+.controls .xx{
+	font-size: 16px;
+	display: inline-block;
+	color: #ababab;
+	position: absolute;
+	left: 159px;
+	padding-bottom: 10px;
+	width: 80px;
+}
+.controls .allTime{
+	font-size: 16px;
+	display: inline-block;
+	color:#ababab;
+	position: absolute;
+	left: 168px;
+}
+.controls .icon-shengyin{
+	position: absolute;
+	left: 600px;
+}
+.controls .icon-quanping{
+	position: absolute;
+	left: 650px;
+}
+.icon-jingyin{
+	position: absolute;
+	left: 600px;
+}
+p.browser{
+	text-align: center;
+    color: red;
+    margin-top: 100px;
+}
