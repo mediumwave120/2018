@@ -1,4 +1,6 @@
 # 2018
+2018年2月2日
+#### [字幕切换](https://mediumwave120.github.io/2018/web/2018/2/2.html)
 2018年2月1日
 #### [CSS3动画效果](https://mediumwave120.github.io/2018/web/2018/2/1.html)
 2018年1月31日
