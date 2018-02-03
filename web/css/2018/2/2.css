@@ -78,3 +78,13 @@
   -webkit-animation: rightcrawl 14s linear infinite;
   animation: rightcrawl 15s linear infinite;
 }
+
+p.text {
+        font-family: "Arial", sans-serif;
+        font-size: 30px;
+        text-align: center;
+        font-weight: bold;
+      color: red;
+      margin-top: 150px;
+      margin-bottom: 20px;
+    }

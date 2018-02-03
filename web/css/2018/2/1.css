@@ -110,6 +110,7 @@ p {font-size: 14px; font-weight: 300; line-height: 22px; padding: 0 30px; margin
 	.row{width: 100%; margin: 110px 0;}
 	.team-members{text-align: center;}
 	.single-member{float: none; display: inline-block; vertical-align: bottom;}
+	/*p.text{margin: 210px 0;}*/
 }
 /*= Media Query End
 =================== */
@@ -117,4 +118,13 @@ p {font-size: 14px; font-weight: 300; line-height: 22px; padding: 0 30px; margin
 img{
 	/*width: 145px;
 	height: 140px;*/
+}
+ p.text {
+ 	/*position: absolute;*/
+    font-family: "Arial", sans-serif;
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+  	color: red;
+  	margin-bottom: 100px;
 }
