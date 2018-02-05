@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css">
+	<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://cdn.bootcss.com/scrollReveal.js/0.1.2/scrollReveal.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js"></script>
+	<link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<!--头部导航 -->
+<header>
+		<nav class="navbar navbar-default" role="navigation">
+		    <div class="container-fluid" >
+			    <div class="navbar-header">
+			        <button type="button" class="navbar-toggle" data-toggle="collapse"
+			                data-target="#example-navbar-collapse">
+			            <span class="sr-only">切换导航</span>
+			            <span class="icon-bar"></span>
+			            <span class="icon-bar"></span>
+			            <span class="icon-bar"></span>
+			        </button>
+			        <a class="navbar-brand" href="#">LOGO</a>
+			    </div>
+			    <div class="container collapse navbar-collapse" id="example-navbar-collapse">
+			    	
+			        <ul class="nav navbar-nav navbar-right">
+			            <li class="active margin-left-20 dw"><a class='' href="#">首页</a></li>
+			            <li class="dropdown margin-left-20 dw">
+			                <a href="#" class="dropdown-toggle" data-toggle="dropdown">产品 <!-- <b class="caret"></b> --></a>
+			                <!-- <ul class="dropdown-menu">
+			                    <li><a href="#a1" data-toggle="tab">智能手表</a></li>
+			                    <li><a href="#a2" data-toggle="tab">智能眼镜</a></li>
+			                    <li><a href="#a3" data-toggle="tab">机器人</a></li>
+			                    <li><a href="#a4" data-toggle="tab">体感车</a></li>
+			                    <li><a href="#a5" data-toggle="tab">无人机</a></li>
+			                </ul> -->
+			            </li>
+			            <li class="margin-left-20 dw" ><a href="#">博客</a></li>
+			            <li class="margin-left-20 dw"><a href="#">关于</a></li>
+			            <li class="margin-left-20 dw" ><a href=""><span class='reg'>注册</span></a></li>
+						<li class='dw'><a href=""><span class='login'>登录</span></a></li>
+			        </ul>
+			    </div>
+		    </div>
+		</nav>
+	</header>
+	<article>
+		<!--图片轮播 -->
+		<div id="myCarousel" class="carousel slide" style='background:grey;'>
+				<!-- 轮播（Carousel）指标 -->
+			<ol class="carousel-indicators">
+				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				<li data-target="#myCarousel" data-slide-to="1"></li>
+				<li data-target="#myCarousel" data-slide-to="2"></li>
+			</ol>   
+			<!-- 轮播（Carousel）项目 -->
+			<div class="carousel-inner">
+				<div class="item active">
+					<img src="https://show.metinfo.cn/muban/res013/323/upload/201605/1464084575.png" alt="First slide">
+					<div class='animation-slide-bottom' data-scroll-reveal="enter bottom and move 50px over 0.83s">懂你，总会多一点</div>
+					<div class='animation-slide-bottom2' data-scroll-reveal="enter top and move 50px over 0.83s">Know You More</div>
+				</div>
+				<div class="item">
+					<img src="https://show.metinfo.cn/muban/res013/323/upload/201605/1464083856.png" alt="Second slide">
+					<div class='animation-slide-bottom'>你一定可以</div>
+					<div class='animation-slide-bottom2'>我相信你</div>
+				</div>
+				<div class="item">
+					<img src="https://show.metinfo.cn/muban/M1032002/328/upload/201703/1488527073.jpg" alt="Second slide">
+					<div class='animation-slide-bottom'>先入为主，布局未来</div>
+					<div class='animation-slide-bottom2'>响应式布局，智能识别多种终端设备</div>
+				</div>
+				
+				<!-- 轮播（Carousel）导航 -->
+				<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+					<span class="glyphicon glyphicon-chevron-left"></span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+					<span class="glyphicon glyphicon-chevron-right"></span>
+					<span class="sr-only">Next</span>
+				</a>
+			</div> 
+		</div>
+		<!-- 科技改变生活 -->
+		<div class="container text-center">
+			<h2 >科技改变生活</h2>
+			<p style='color:#5e7387;' >科技正用你无法想象的速度在改变世界，改变人们的生活</p>
+			<p style='height:50px;'></p>
+			<div class="row">
+				<div class="col-xs-3">
+					<i class=" glyphicon glyphicon-plane" ></i>
+					<h3 >无人驾驶</h3>
+					<p >无人驾驶车将改变人们的出行方式。据估计，无人驾驶车可将每年因交通事故死亡的人数（120万）削减一半。</p>
+				</div>
+				<div class="col-xs-3">
+					<i class=' glyphicon glyphicon-eye-open' ></i>
+					<h3 >虚拟现实</h3>
+					<p >简称VR，创建和体验虚拟世界，有一天你也会有专属自己的虚拟人生。</p>
+				</div>
+				<div class="col-xs-3">
+					<i class='glyphicon glyphicon-user' ></i>
+					<h3 >机器人</h3>
+					<p >未来将会有更多给人们生活带来改变的机器人，甚至机器人会有自己的情感。</p>
+				</div>
+				<div class="col-xs-3">
+					<i class=" glyphicon glyphicon-plane" ></i>
+					<h3 >无人机</h3>
+					<p >人们已经在利用无人机寻找等待救援的远足者和滑雪者，拍摄房屋航空图像，以及调查考古遗址。</p>
+				</div>
+			</div>
+		</div>
+		<div class="container text-center">
+			<h2>科技产品</h2>
+			<p style='color:#5e7387;'>我们致力于让科技改善人们的生活</p>
+			<p style='height:50px;'></p>
+			<!-- 左右滑动区块， swiper插件-->
+		    <div class="swiper-container"  >
+		        <ul class="swiper-wrapper" id="myTab">
+		            <li class="swiper-slide active"><a href="#all" data-toggle="tab">全部</a></li>
+		            <li class="swiper-slide"><a href="#a1" data-toggle="tab">智能手表</a></li>
+		            <li class="swiper-slide"><a href="#a2" data-toggle="tab">智能眼镜</a></li>
+		            <li class="swiper-slide"><a href="#a3" data-toggle="tab">机器人</a></li>
+		            <li class="swiper-slide"><a href="#a4" data-toggle="tab">体感车</a></li>
+		            <li class="swiper-slide"><a href="#a5" data-toggle="tab">无人机</a></li>
+		        </ul>
+		        <div class="swiper-scrollbar"></div>
+		    </div>
+		</div>
+		<div class="container text-center">
+			<div id="myTabContent" class="tab-content">
+				<div class="tab-pane fade in active" id="all">
+					<div class="row">
+		                <div class="col-xs-3">
+		                     <img src="https://show.metinfo.cn/muban/res013/323/include/thumb.php?dir=upload/201605/1463968649.jpg&x=400&y=400" alt="1"/>
+		                    <p >Apple Watch Sport</p>
+		                    <p class='price'>2288.00元</p>
+		                </div>
+		                <div class="col-xs-3">
+		                      <img src="https://show.metinfo.cn/muban/res013/323/include/thumb.php?dir=upload/201605/1463990444.jpg&x=400&y=400" alt="3"  />
+		                    <p>ALPHA 2</p>
+							<p class='price'>7999.00元</p>
+		                </div>
+		                <div class="col-xs-3">
+		                    <img src="https://show.metinfo.cn/muban/res013/323/include/thumb.php?dir=upload/201605/1463972218.jpg&x=400&y=400" alt="2"  />
+		                     <p>儿童手表</p>
+		                    <p class='price'>999.00元</p>
+		                </div>
+		                <div class="col-xs-3">
+		                     <img src="https://show.metinfo.cn/muban/res013/323/include/thumb.php?dir=upload/201605/1463992341.jpg&x=400&y=400" alt="1"  />
+		                    <p>公子小白</p>
+							<p class='price'>1880.00元</p>
+		                </div>
+		                 <div  class="col-xs-3">
+		                   
+		                        <img src="https://show.metinfo.cn/muban/res013/323/include/thumb.php?dir=upload/201605/1463987967.jpg&x=400&y=400" alt="4" />                    
+		                    <p>Gear VR</p>
+		                    <p class='price' class='price'> 1288.00元</p>
+		                </div>
+
+		                <div class="col-xs-3">		                   
+		                        <img src="https://show.metinfo.cn/muban/res013/323/include/thumb.php?dir=upload/201605/1463989303.jpg&x=400&y=400" alt="3" />		                    
+		                    <p>Pico Neo</p>
+		                    <p class='price'>3399.00元</p>
+		                </div>
+		                <div class="col-xs-3">		                    
+		                        <img src="https://show.metinfo.cn/muban/res013/323/include/thumb.php?dir=upload/201605/1463993829.png&x=400&y=400" alt="3" />		                    
+		                    <p>Phantom 4</p>
+		                    <p class='price'>9999.00元</p>
+		                </div>
+		            </div>
+				</div> 
+
+				<!-- 智能手表 position: absolute;top:1365px;-->
+				<div class="tab-pane fade wh" id="a1">
+					<div class="row">
+						<div class="col-xs-12">
+							 <img src="https://show.metinfo.cn/muban/res013/323/include/thumb.php?dir=upload/201605/1463968649.jpg&x=400&y=400" alt="1"   />
+		                    <p>Apple Watch Sport</p>
+		                    <p class='price'>2288.00元</p>
+						</div>						
+					</div>		                                      
+	            </div>
+				<!-- 智能眼镜 -->
+				<div class="tab-pane fade wh" id="a2">
+	                <div class="row">
+						<div class="col-xs-12">
+	                        <img src="https://show.metinfo.cn/muban/res013/323/include/thumb.php?dir=upload/201605/1463987967.jpg&x=400&y=400" alt="4"/>        
+	                    	<p>Gear VR</p>
+	                    	<p class='price' class='price'> 1288.00元</p>
+						</div>
+	           		</div>
+	            </div>
+	            <!-- 机器人 -->
+				<div class="tab-pane fade wh" id="a3">
+	                <div class="row">
+						<div class="col-xs-12">
+	                    	<img src="https://show.metinfo.cn/muban/res013/323/include/thumb.php?dir=upload/201605/1463990444.jpg&x=400&y=400" alt="4"/> 
+	               			<p>ALPHA 2</p>
+	               			<p class='price' class='price'> 7999.00元</p>
+	                	</div>
+	           		</div>
+	            </div>
+	             <!-- 体感车 -->
+				<div class="tab-pane fade wh" id="a4">
+	                <div class="row">
+						<div class="col-xs-12">
+	                    	<img src="https://show.metinfo.cn/muban/res013/323/include/thumb.php?dir=upload/201605/1463993502.jpg&x=400&y=400" alt="4"/>                 
+	               			<p>九号平衡车</p>
+	                		<p class='price' class='price'>1999.00元</p>
+	                	</div>
+	           		</div>
+	            </div>
+				 <!-- 无人机 -->
+				<div class="tab-pane fade wh" id="a5">
+	                <div class="row">
+						<div class="col-xs-12">
+	                    	<img src="https://show.metinfo.cn/muban/res013/323/include/thumb.php?dir=upload/201605/1463993829.png&x=400&y=400" alt="4"/>                 
+	                		<p>Phantom 4</p>
+		            		<p class='price'>9999.00元</p>
+
+	            		</div>	
+	      			</div>
+				</div>
+			</div>
+		</div>
+		
+
+		<div class="container text-center">
+			<h2>博客资讯</h2>
+			<p style='color:#5e7387;'>分享最新科技资讯，关注智能硬件</p>
+			<p style='height:50px;'></p>
+			
+			<div class="row">
+				<div class="col-xs-6">
+					<div class="media-left">
+						<a href="">
+							<img src="https://show.metinfo.cn/muban/res013/323/include/thumb.php?dir=upload/201605/1464075489148330.jpg&x=200&y=150" alt="">
+						</a>
+					</div>
+					<div class="media-right">
+						<h4 style='margin-top:0px;'>Oculus在伦敦组建VR团队</h4>
+						<p class='textp'>自从2014年斥资20亿美元收购Oculus以来，Facebook作为社交平台巨头一直在VR发展的前沿。而随着市场发展，VR在美国和中国等地刮起狂潮。Facebook准备扩大疆域，向英国瞄准。根...</p>
+						<p class="info">
+							<span>2017-01-14</span>
+							<span class="margin-left-10">admin</span>
+							<span class="margin-left-10"><i class="icon wb-eye margin-right-5" aria-hidden="true"></i>3697</span>
+						</p>
+					</div>
+				</div>
+				<div class="col-xs-6">
+					<div class="media-left">
+						<a href="">
+							<img src="https://show.metinfo.cn/muban/res013/323/include/thumb.php?dir=upload/201605/1464075489148330.jpg&x=200&y=150" alt="">
+						</a>
+					</div>
+					<div class="media-right">
+						<h4 style='margin-top:0px;'>Oculus在伦敦组建VR团队</h4>
+						<p class='textp'>自从2014年斥资20亿美元收购Oculus以来，Facebook作为社交平台巨头一直在VR发展的前沿。而随着市场发展，VR在美国和中国等地刮起狂潮。Facebook准备扩大疆域，向英国瞄准。根...</p>
+						<p class="info">
+							<span>2017-01-14</span>
+							<span class="margin-left-10">admin</span>
+							<span class="margin-left-10"><i class="icon wb-eye margin-right-5" aria-hidden="true"></i>3697</span>
+						</p>
+					</div>
+				</div>
+			</div>
+			<p class='ph'></p>
+			<div class="row">
+				<div class="col-xs-6">
+					<div class="media-left">
+						<a href="">
+							<img src="https://show.metinfo.cn/muban/res013/323/include/thumb.php?dir=upload/201605/1464073341.jpg&x=200&y=150" alt="">
+						</a>
+					</div>
+					<div class="media-right">
+						<h4 style='margin-top:0px;'>Chrome OS支持所有安卓应用</h4>
+						<p class='textp'>“Google Play商店马上就要登陆Chrome OS了”谷歌公司在今天的开发者大会上宣布。然后大家就可以在自己的</p>
+						<p class="info">
+							<span>2017-01-14</span>
+							<span class="margin-left-10">admin</span>
+							<span class="margin-left-10"><i class="icon wb-eye margin-right-5" aria-hidden="true"></i>3697</span>
+						</p>
+					</div>
+				</div>
+				<div class="col-xs-6">
+					<div class="media-left">
+						<a href="">
+							<img src="https://show.metinfo.cn/muban/res013/323/include/thumb.php?dir=upload/201605/1464073341.jpg&x=200&y=150" alt="">
+						</a>
+					</div>
+					<div class="media-right">
+						<h4 style='margin-top:0px;'>Chrome OS支持所有安卓应用</h4>
+						<p class='textp'>“Google Play商店马上就要登陆Chrome OS了”谷歌公司在今天的开发者大会上宣布。然后大家就可以在自己的</p>
+						<p class="info">
+							<span>2017-01-14</span>
+							<span class="margin-left-10">admin</span>
+							<span class="margin-left-10"><i class="icon wb-eye margin-right-5" aria-hidden="true"></i>3697</span>
+						</p>
+					</div>
+				</div>
+			</div>
+			<p  class='ph'></p>
+			<div class="row">
+				<div class="col-xs-6">
+					<div class="media-left">
+						<a href="">
+							<img src="https://show.metinfo.cn/muban/res013/323/include/thumb.php?dir=upload/201605/1463992953.jpg&x=200&y=150" alt="">
+						</a>
+					</div>
+					<div class="media-right">
+						<h4 style='margin-top:0px;'>人工智能风口来袭 情感机器人众望所归</h4>
+						<p class='textp'>近日，习近平在中科大“检阅”了多款人工智能机器人，Gowild智能科技公司开发的全球首款情感社交机器人“公子小白”激萌可爱，分外抢眼。据悉，受“检阅”的人工智能机器人的开发者包括科大讯飞、Gowild...</p>
+						<p class="info">
+							<span>2017-01-14</span>
+							<span class="margin-left-10">admin</span>
+							<span class="margin-left-10"><i class="icon wb-eye margin-right-5" aria-hidden="true"></i>3697</span>
+						</p>
+					</div>
+				</div>
+				<div class="col-xs-6">
+					<div class="media-left">
+						<a href="">
+							<img src="https://show.metinfo.cn/muban/res013/323/include/thumb.php?dir=upload/201605/1463992953.jpg&x=200&y=150" alt="">
+						</a>
+					</div>
+					<div class="media-right">
+						<h4 style='margin-top:0px;'>人工智能风口来袭 情感机器人众望所归</h4>
+						<p class='textp'>近日，习近平在中科大“检阅”了多款人工智能机器人，Gowild智能科技公司开发的全球首款情感社交机器人“公子小白”激萌可爱，分外抢眼。据悉，受“检阅”的人工智能机器人的开发者包括科大讯飞、Gowild...</p>
+						<p class="info">
+							<span>2017-01-14</span>
+							<span class="margin-left-10">admin</span>
+							<span class="margin-left-10"><i class="icon wb-eye margin-right-5" aria-hidden="true"></i>3697</span>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container text-center">
+			<p style='height:50px;'></p>
+			<h2>关于我们</h2>
+			<p style='color:#5e7387;'>我们致力于让科技改善人们的生活</p>
+			<p style='height:50px;'></p>
+			<div class="container-fulid" style='overflow: hidden;'>
+				<img src="http://show.metinfo.cn/muban/res013/323/upload/201605/1464245734139534.jpg" alt="" style="display: inline;">
+			</div>
+			<hr>
+			<p style='text-align:left;font-size: 18px;'>某科技公司是一个诞生于2013年机器人浪潮来袭前际，总部位于“硬件之都”中国深圳。</p>
+			<p style='text-align:left;font-size: 18px;'>我们是一群热衷于智能机器人的极客、设计师和发烧友，对未来充满无限创想、野心和激情。“在最好的时光里，撒野去”是我们所倡导的品牌文化，号召属于这个时代的年轻人，不羁束缚、随心逐梦！</p>
+			<p style='text-align:left;font-size: 18px;'>比普通创客幸运一些的是，我们成立之初，就在语义技术、图数据管理和供应链方面拥有比较丰富的经验和积累，并且、汇聚整合了完善的生产链条和多元的渠道资源，我们愿意拥抱大胆有趣的产品理念，为用户创造更多的惊喜！</p>
+		</div>
+		
+		<p style='height:50px;'></p>
+		<div class="container text-center">
+			<div class="row">
+				<div class="col-xs-3 list">
+					<h3>产品</h3>					
+				 	<p>智能手表</p>
+				 	<p>智能眼镜</p>
+				 	<p>机器人</p>
+				 	<p>体感车</p>
+				 	<p>无人机</p>					
+				</div>
+				<div class="col-xs-3 list">
+					<h3>支持</h3>
+					<p>售后政策</p>
+					<p>相关下载</p>	
+				</div>
+				<div class="col-xs-3 list">
+					<h3>博客</h3>		
+					<p>产品资讯</p>
+					<p>行业动态</p>
+					<p>国际资讯</p>
+				</div>
+				<div class="col-xs-3 list">
+					<h3>关于</h3>				
+					<p>关于我们</p>
+					<p>联系我们</p>
+					<p>加入我们</p>
+					<p>意见反馈</p>		
+				</div>
+			</div>
+		</div>
+		<div class="container text-center">
+			<p style='font-size:20px;'>电话：<em>12345678</em></p>
+			<p style='font-size:20px;'><em>周一至周五 08:30~17:30</em></p>
+		</div>
+	</article>
+
+	
+
+	
+	<footer>
+    <div class="container text-center">
+		<p>科技公司 版权所有 © 2016-2017</p>
+
+		<div class="powered_by_metinfo">Powered&nbsp;by&nbsp;&nbsp;</div>
+
+    </div>
+</footer>
+	<script>	
+	  $('img,i').attr('data-scroll-reveal', 'enter bottom and move 50px over 1s');
+	  $('h2').attr('data-scroll-reveal', 'enter top and move 50px over 1s');
+	  $('h2+p').attr('data-scroll-reveal', 'enter bottom and move 50px over 1s');
+	  $('.media-right').attr('data-scroll-reveal', 'enter bottom and move 50px over 1s');
+          window.scrollReveal = new scrollReveal({reset: true});
+
+ 
+        //window.screen.availWidth 
+        if(window.screenLeft  <500){
+        var swiper = new Swiper('.swiper-container', {
+        scrollbar: '.swiper-scrollbar',
+        scrollbarHide: true,
+        slidesPerView: 'auto',
+        centeredSlides: true,
+        spaceBetween: 1,
+        grabCursor: false,
+        scrollbarDraggable:true 
+    });
+    }
+ 
+    
+
+
+    </script>
+</body>
+</html>
