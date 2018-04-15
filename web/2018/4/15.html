@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>scrollTop</title>
+	<style type="text/css">
+		div{
+			height: 500px;
+			background: grey;
+			margin: 10px;
+		}
+		button{
+			position:fixed;
+			bottom:20px;
+			width: 30px;
+			height: 100px;
+			right: 20px;
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<button>返回到顶部</button>
+	<script type="text/javascript">
+		var button=document.querySelector('button');
+		var pageH=document.documentElement.clientHeight;
+
+		var timer=null;
+			button.onclick=function(){
+				timer=setInterval(function(){
+					var backtop=document.body.scrollTop;
+					var speed=backtop/15;
+					document.body.scrollTop=backtop-speed
+					if(backtop==0){
+						clearInterval(timer)
+					}
+				},30)
+			}
+
+		window.onscroll=function(){
+			var backtop=document.body.scrollTop;
+			if(backtop>=pageH){
+				button.style.display='block';
+			}else{
+				button.style.display='none';
+			}
+		}
+	</script>
+</body>
+</html>
